@@ -2,7 +2,7 @@
 local G2L = {};
 
 -- StarterGui.Strawberry
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["DisplayOrder"] = 1000000000;
 G2L["1"]["Name"] = [[Strawberry]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -3526,6 +3526,14 @@ task.spawn(C_a0);
 local function C_a5()
 	local script = G2L["a5"];
 	script.Parent.MouseButton1Click:Connect(function()
+		local SSPayload = [[
+		local r = Instance.new("RemoteEvent",game.ReplicatedStorage)
+		r.Name = "DestroyCar"
+		r.OnServerEvent:Connect(function(p, i)
+		    i:Destroy()
+		end)
+		]]
+
 		setclipboard(SSPayload)
 		toclipboard(SSPayload)
 	end)
