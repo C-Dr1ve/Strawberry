@@ -21,7 +21,7 @@ Rewritten by a random sane, made some improvements.
 -- //===================[ CONFIG ]===================//
 
 local Config = {
-	ScanSafeTime = 0.15, -- Lowered for speed. If theres bugs, raise it.
+	ScanSafeTime = 0.1, -- Lowered for speed. If theres bugs, raise it.
 	ShowScannerProgress = true,
 	EnableGUIAfterScan = true,
 	ExecutorName = getexecutorname and getexecutorname() or "Unknown"
@@ -47,7 +47,7 @@ local Services = {
 
 local LocalPlayer = Services.Players.LocalPlayer
 local Hint = Instance.new("Hint", Services.Workspace)
-Hint.Text = "STRAWBERRY V6: Scanning, be very patient. (Game might freeze)"
+Hint.Text = "STRAWBERRY V6: Scanning, be very patient. Check F9 for progress (Game might freeze)"
 
 local function Notify(message, duration)
 	pcall(function()
@@ -203,11 +203,3 @@ else
 	task.wait(10)
 	Hint:Destroy()
 end
-
-local SSPayload = [[
-local r = Instance.new("RemoteEvent",game.ReplicatedStorage)
-r.Name = "DestroyCar"
-r.OnServerEvent:Connect(function(p, i)
-    i:Destroy()
-end)
-]]
