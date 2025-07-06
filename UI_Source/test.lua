@@ -1,4 +1,6 @@
--- Instances: 170 | Scripts: 33 | Modules: 0 | Tags: 0
+local bindevent = game.Players.LocalPlayer:FindFirstChild("bindevent")
+local methodvalue = game.Players.LocalPlayer:FindFirstChild("methodvalue")
+
 local G2L = {};
 
 -- StarterGui.Strawberry
@@ -91,7 +93,7 @@ G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["a"]["BackgroundTransparency"] = 1;
 G2L["a"]["Size"] = UDim2.new(0, 165, 0, 33);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[🍓Strawberry v5.5.0 (FE)]];
+G2L["a"]["Text"] = [[🍓Strawberry (BETA UI)]];
 G2L["a"]["Name"] = [[Title]];
 G2L["a"]["Position"] = UDim2.new(0.22333, 0, 0.02, 0);
 
@@ -1584,7 +1586,7 @@ task.spawn(C_c);
 local function C_19()
 local script = G2L["19"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	local Players = game:GetService("Players")
@@ -1638,7 +1640,7 @@ task.spawn(C_19);
 local function C_1e()
 local script = G2L["1e"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	local bannedplayers = {}
@@ -1688,7 +1690,7 @@ task.spawn(C_1e);
 local function C_23()
 local script = G2L["23"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1726,7 +1728,7 @@ task.spawn(C_23);
 local function C_28()
 local script = G2L["28"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1751,7 +1753,7 @@ task.spawn(C_28);
 local function C_2d()
 local script = G2L["2d"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1763,7 +1765,7 @@ task.spawn(C_2d);
 local function C_32()
 local script = G2L["32"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1779,7 +1781,7 @@ task.spawn(C_32);
 local function C_37()
 local script = G2L["37"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1816,7 +1818,7 @@ task.spawn(C_37);
 local function C_3c()
 local script = G2L["3c"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1853,7 +1855,7 @@ task.spawn(C_3c);
 local function C_41()
 local script = G2L["41"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1895,7 +1897,7 @@ task.spawn(C_41);
 local function C_46()
 local script = G2L["46"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1933,7 +1935,7 @@ task.spawn(C_46);
 local function C_4b()
 local script = G2L["4b"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2625,7 +2627,7 @@ task.spawn(C_4b);
 local function C_50()
 	local script = G2L["50"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	flying = false
@@ -2728,7 +2730,7 @@ task.spawn(C_50);
 local function C_55()
 	local script = G2L["55"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2746,7 +2748,7 @@ task.spawn(C_55);
 local function C_5a()
 	local script = G2L["5a"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2783,7 +2785,7 @@ task.spawn(C_5a);
 local function C_5f()
 	local script = G2L["5f"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2820,7 +2822,7 @@ task.spawn(C_5f);
 local function C_64()
 	local script = G2L["64"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2921,7 +2923,7 @@ task.spawn(C_64);
 local function C_69()
 	local script = G2L["69"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	local Players = game:GetService("Players")
@@ -2975,7 +2977,7 @@ task.spawn(C_69);
 local function C_6e()
 	local script = G2L["6e"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	--this was my pain and suffering :')
@@ -3091,7 +3093,7 @@ task.spawn(C_6e);
 local function C_73()
 	local script = G2L["73"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3112,7 +3114,7 @@ task.spawn(C_73);
 local function C_78()
 	local script = G2L["78"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3149,7 +3151,7 @@ task.spawn(C_78);
 local function C_7d()
 	local script = G2L["7d"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3186,7 +3188,7 @@ task.spawn(C_7d);
 local function C_82()
 	local script = G2L["82"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	local Players = game:GetService("Players")
@@ -3240,7 +3242,7 @@ task.spawn(C_82);
 local function C_87()
 	local script = G2L["87"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3305,7 +3307,7 @@ task.spawn(C_87);
 local function C_8c()
 	local script = G2L["8c"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3321,7 +3323,7 @@ task.spawn(C_8c);
 local function C_91()
 	local script = G2L["91"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3341,7 +3343,7 @@ task.spawn(C_91);
 local function C_96()
 	local script = G2L["96"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	local Players = game:GetService("Players")
@@ -3381,7 +3383,7 @@ task.spawn(C_96);
 local function C_9b()
 	local script = G2L["9b"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	local function notif(msg,dur)
@@ -3431,7 +3433,7 @@ task.spawn(C_9b);
 local function C_a0()
 	local script = G2L["a0"];
 	local function delete(item)
-        multiargfire(item,game.Players.LocalPlayer.deletebind,method)
+        multiargfire(item,deletebind,methodvalue.Value)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
