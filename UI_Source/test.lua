@@ -1,6 +1,22 @@
 local bindevent = game.Players.LocalPlayer:FindFirstChild("bindevent")
 local methodvalue = game.Players.LocalPlayer:FindFirstChild("methodvalue")
 
+local function multiargfire(obj,mainremote,typeofmethod)
+    local fuzzerpatterns = {
+	    function() mainremote:FireServer(obj) end,
+	    function() mainremote:FireServer(nil, obj) end,
+	    function() mainremote:FireServer(nil, nil, obj) end,
+	    function() mainremote:FireServer({obj}) end,
+	    function() mainremote:FireServer({Target = obj}) end,
+	    function() mainremote:FireServer("Destroy", obj) end,
+	    function() mainremote:FireServer("delete", obj) end,
+	    function() mainremote:FireServer("remove", obj) end,
+	    function() mainremote:FireServer({action = "delete", object = obj}) end,
+	    function() mainremote:FireServer(obj.Name) end
+    }
+    pcall(fuzzerpatterns[typeofmethodmethod])
+end
+
 local G2L = {};
 
 -- StarterGui.Strawberry
