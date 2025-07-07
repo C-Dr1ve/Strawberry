@@ -11,7 +11,7 @@
 - 🔍 **Remote Event Scanner** – Detects vulnerable remote events/functions in real-time.
 - 🛠️ **Weaponization Engine** – Automatically hooks and triggers exploitable remotes.
 - 📜 **Multi Executor Support** – You can run this script on any level 3+ executor (e.g., `Solora`, `Xeno`, `Swift`, etc.).
-- 🧠 **Command System** – Provides a suite of FE admin-style commands (e.g., `kill`, `freeze`, `bring`, etc.).
+- 🧠 **Command System** – Provides a suite of FE admin-style commands.
 - ⚡ **Fast & Lightweight** – Optimized for minimal lag and maximum performance.
 - 🛡️ **Auto-Bypass Detection** – Avoids basic anti-exploit detection systems.
 
