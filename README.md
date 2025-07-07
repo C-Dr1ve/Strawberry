@@ -65,7 +65,7 @@ Using this script to interfere with or damage other users' gameplay is a violati
 ## 📫 Contact
 
 Have suggestions, issues, or want to contribute?  
-Open an [issue](discord.com/users/1244738630270980177) or submit a pull request!
+Open an [issue](https://www.discord.com/users/1244738630270980177) or submit a pull request!
 
 ---
 
