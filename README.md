@@ -20,7 +20,7 @@
 ## 📦 Installation
 
 1. **Get a Roblox Executor** – This script requires an executor that supports LUAU.
-2. **Copy the Script** – [Click here to get the latest version](./strawberry.lua)
+2. **Copy the Script** – [Click here to get the latest version](https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/Current_Version.lua)
 3. **Execute in Roblox** – Paste it into your executor and run it in-game.
 
 ---
@@ -40,10 +40,10 @@
 | Command    | Description              |
 |------------|--------------------------|
 | `kill`    | Kills the targeted player|
-| `bring`   | Brings a player to you   |
-| `freeze`  | Freezes a player in place|
-| `fling`   | Flings a player across the map|
-| `tools`   | Gives basic tools        |
+| `goto`   | Go to a player   |
+| `brickify`  | Makes the target's character a bunch of bricks|
+| `kick`   | Kicks the player from the server|
+| `server ban`   | **Server** bans the player        |
 
 *More commands added frequently!*
 
