@@ -111,16 +111,16 @@ end
 -- // the function fuzzer :uwu:
 local function function_multiargfire(obj, mainremote, setmethod)
 	local fuzzerpatterns = {
-		function() mainremote:InvokeServer(obj); end,
-		function() mainremote:InvokeServer(nil, obj); end,
-		function() mainremote:InvokeServer(nil, nil, obj); end,
-		function() mainremote:InvokeServer({obj}); end,
-		function() mainremote:InvokeServer({Target = obj}); end,
-		function() mainremote:InvokeServer("Destroy", obj); end,
-		function() mainremote:InvokeServer("delete", obj); end,
-		function() mainremote:InvokeServer("remove", obj); end,
-		function() mainremote:InvokeServer({action = "delete", object = obj}); end,
-		function() mainremote:InvokeServer(obj.Name); end
+		task.spawn(function() mainremote:InvokeServer(obj); end),
+		task.spawn(function() mainremote:InvokeServer(nil, obj); end),
+		task.spawn(function() mainremote:InvokeServer(nil, nil, obj); end),
+		task.spawn(function() mainremote:InvokeServer({obj}); end),
+		task.spawn(function() mainremote:InvokeServer({Target = obj}); end),
+		task.spawn(function() mainremote:InvokeServer("Destroy", obj); end),
+		task.spawn(function() mainremote:InvokeServer("delete", obj); end),
+		task.spawn(function() mainremote:InvokeServer("remove", obj); end),
+		task.spawn(function() mainremote:InvokeServer({action = "delete", object = obj}); end),
+		task.spawn(function() mainremote:InvokeServer(obj.Name); end)
 	}
 	
 	-- Check if the part gets destroyed (aka removed from its parent)
