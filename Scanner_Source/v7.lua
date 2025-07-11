@@ -18,20 +18,18 @@ Rewritten by saji w love ❤️‍
 
 Features:
 Multi Arg Fuzzing
-Checks for RemoteEvents, RemoteFunctions (instead of just events)
+Checks for RemoteEvents
 
 Made to be bugless (bugs very rare due to great executor support)
 --]]
 
 -- //===================[ CONFIG ]===================//
 local Config = {
-	ScanSafeTime       = 0.1,  -- wait time for remote check
-	EnableGUIAfterScan = true,  -- set false to just scan without GUI
+	ScanSafeTime       = 0.1,  -- // wait time for remote check
+	EnableGUIAfterScan = true,  -- // set false to just scan without GUI
 }
 
 -- //===================[ CORE SETUP ]===================//
-local scanStartTime = tick()
-
 local Services = {
 	Players            = game:GetService("Players"),
 	ReplicatedStorage  = game:GetService("ReplicatedStorage"),
@@ -45,11 +43,11 @@ local Services = {
 
 local LocalPlayer = Services.Players.LocalPlayer
 
--- Creates status at top of the screen
+-- // Creates status at top of the screen
 local Hint = Instance.new("Hint", Services.Workspace)
-Hint.Text = "STRAWBERRY V7: Scanning, be very patient. Check F9 for progress (Game might freeze)"
+Hint.Text = "STRAWBERRY V7: check the notif on the bottom right"
 
--- Notify function 
+-- // Notify function 
 local function Notify(message, duration)
 	pcall(function()
 		Services.StarterGui:SetCore("SendNotification", {
@@ -60,7 +58,8 @@ local function Notify(message, duration)
 	end)
 end
 
--- Some important variables
+-- // Some important variables
+local scanStartTime = tick()
 local vulnRemote
 local vulnRemotePattern
 local found = false
@@ -82,7 +81,7 @@ local function event_multiargfire(obj, mainremote, setmethod)
 		function() mainremote:FireServer(obj.Name); end
 	}
 
-	-- Check if the part gets destroyed (aka removed from its parent)
+	-- // Check if the part gets destroyed (aka removed from its parent)
 	local origParent = obj.Parent
 	local function IsDestroyed(part)
 		return part.Parent ~= origParent
@@ -108,50 +107,9 @@ local function event_multiargfire(obj, mainremote, setmethod)
 	end
 end
 
--- // the function fuzzer :uwu:
-local function function_multiargfire(obj, mainremote, setmethod)
-	local fuzzerpatterns = {
-		task.spawn(function() mainremote:InvokeServer(obj); end),
-		task.spawn(function() mainremote:InvokeServer(nil, obj); end),
-		task.spawn(function() mainremote:InvokeServer(nil, nil, obj); end),
-		task.spawn(function() mainremote:InvokeServer({obj}); end),
-		task.spawn(function() mainremote:InvokeServer({Target = obj}); end),
-		task.spawn(function() mainremote:InvokeServer("Destroy", obj); end),
-		task.spawn(function() mainremote:InvokeServer("delete", obj); end),
-		task.spawn(function() mainremote:InvokeServer("remove", obj); end),
-		task.spawn(function() mainremote:InvokeServer({action = "delete", object = obj}); end),
-		task.spawn(function() mainremote:InvokeServer(obj.Name); end)
-	}
-	
-	-- Check if the part gets destroyed (aka removed from its parent)
-	local origParent = obj.Parent
-	local function IsDestroyed(part)
-		return part.Parent ~= origParent
-	end
-	-- // testpart not at original parent = destroyed
-
-	if setmethod ~= nil then
-		local fuzzfunc = fuzzerpatterns[setmethod]
-		if fuzzfunc then
-			pcall(fuzzfunc)
-		end
-	else
-		for i, pattern in ipairs(fuzzerpatterns) do
-			local fuzzfunc = pattern
-			if fuzzfunc then
-				pcall(fuzzfunc)
-				task.wait(Config.ScanSafeTime)
-				if IsDestroyed(obj) then
-					return i
-				end
-			end
-		end
-	end
-end
-
--- Checks if firing the remote destroys our test part
+-- // Checks if firing the remote destroys our test part
 local function IsVulnerable(remote)
-	-- Finds a testpart as StarterGear or any BasePart in Workspace
+	-- // Finds a testpart as StarterGear or any BasePart in Workspace
 	local testPart = LocalPlayer:FindFirstChild("StarterGear")
 	if not testPart then
 		for _, v in ipairs(Services.Workspace:GetDescendants()) do
@@ -179,20 +137,6 @@ local function IsVulnerable(remote)
 				destroyed = false
 			end
 		end)
-	elseif remote:IsA("RemoteFunction") then
-		local success = pcall(function()
-			local pattern = function_multiargfire(testPart, remote, nil)
-			if type(pattern) == "number" then
-				vulnRemotePattern = pattern
-				destroyed = true
-			else
-				destroyed = false
-			end
-		end)
-
-		if not success then
-			warn("strawberry: remote invoke errored")
-		end
 	else
 		warn("strawberry: unknown remote type")
 		return false
@@ -207,7 +151,7 @@ local function IsVulnerable(remote)
 	end
 end
 
--- Scan common services for vuln remotes
+-- // Scan common services for vuln remotes
 local function ScanForBackdoor()
 	local locationsToScan = {
 		Services.ReplicatedStorage,
@@ -222,9 +166,7 @@ local function ScanForBackdoor()
 		for _, remote in ipairs(location:GetDescendants()) do
 			if found then break end
 			if not remote:IsA("RemoteEvent") then
-				if not remote:IsA("RemoteFunction") then
-					continue
-				end
+				continue
 			end
 			if not remote.Parent then
 				continue
@@ -245,8 +187,10 @@ end
 
 -- //===================[ EXECUTION ]===================//
 
+-- // Start the scan
 ScanForBackdoor()
 
+-- // Finalize the results
 if found and vulnRemote then
 	Hint.Text = ("STRAWBERRY V7: Backdoor located in %.2fs. Remote: %s")
 		:format(tick() - scanStartTime, vulnRemote.Name)
@@ -263,8 +207,6 @@ if found and vulnRemote then
 	shared.strawberryhook = function(target)
 		if vulnRemote:IsA("RemoteEvent") then
 			event_multiargfire(target, vulnRemote, vulnRemotePattern)
-		elseif vulnRemote:IsA("RemoteFunction") then
-			function_multiargfire(target, vulnRemote, vulnRemotePattern)
 		end
 	end
 
