@@ -1,4 +1,4 @@
--- Instances: 180 | Scripts: 35 | Modules: 0 | Tags: 0
+-- Instances: 191 | Scripts: 39 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.Strawberry
@@ -167,7 +167,6 @@ G2L["12"] = Instance.new("ScrollingFrame", G2L["2"]);
 G2L["12"]["Active"] = true;
 G2L["12"]["BorderSizePixel"] = 0;
 G2L["12"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-G2L["12"]["CanvasPosition"] = Vector2.new(0, 1286);
 G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["12"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
@@ -1548,7 +1547,7 @@ G2L["a6"]["FontFace"] = Font.new([[rbxassetid://16658221428]], Enum.FontWeight.M
 G2L["a6"]["BackgroundTransparency"] = 0.8;
 G2L["a6"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a6"]["Text"] = [[Bring (1 tool for each target)]];
+G2L["a6"]["Text"] = [[Bring (tool required)]];
 G2L["a6"]["Name"] = [[Bring]];
 
 
@@ -1661,6 +1660,100 @@ G2L["b3"]["Name"] = [[UIDrag]];
 -- StarterGui.Strawberry.MainFrame.MainHandler
 G2L["b4"] = Instance.new("LocalScript", G2L["2"]);
 G2L["b4"]["Name"] = [[MainHandler]];
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize
+G2L["b5"] = Instance.new("Frame", G2L["2"]);
+G2L["b5"]["ZIndex"] = 2;
+G2L["b5"]["BorderSizePixel"] = 0;
+G2L["b5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b5"]["Size"] = UDim2.new(0, 30, 0, 25);
+G2L["b5"]["Position"] = UDim2.new(0.95633, 10, 0.00787, 0);
+G2L["b5"]["Name"] = [[Minimize]];
+G2L["b5"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.UICorner
+G2L["b6"] = Instance.new("UICorner", G2L["b5"]);
+G2L["b6"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.RE
+G2L["b7"] = Instance.new("ImageButton", G2L["b5"]);
+G2L["b7"]["BorderSizePixel"] = 0;
+G2L["b7"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["b7"]["BackgroundTransparency"] = 1;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["b7"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+G2L["b7"]["ZIndex"] = 3;
+G2L["b7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b7"]["Image"] = [[rbxassetid://16423157073]];
+G2L["b7"]["Size"] = UDim2.new(1, -14, 1, -14);
+G2L["b7"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["b7"]["Name"] = [[RE]];
+G2L["b7"]["Position"] = UDim2.new(0.5, 0, 0.46667, 0);
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.RE.Check
+G2L["b8"] = Instance.new("LocalScript", G2L["b7"]);
+G2L["b8"]["Name"] = [[Check]];
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.Shadow
+G2L["b9"] = Instance.new("ImageLabel", G2L["b5"]);
+G2L["b9"]["BorderSizePixel"] = 0;
+G2L["b9"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
+G2L["b9"]["SliceScale"] = 0.1;
+G2L["b9"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b9"]["ImageTransparency"] = 0.5;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["b9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b9"]["Image"] = [[http://www.roblox.com/asset/?id=13960012399]];
+G2L["b9"]["Size"] = UDim2.new(1, 18, 1, 18);
+G2L["b9"]["BackgroundTransparency"] = 1;
+G2L["b9"]["Name"] = [[Shadow]];
+G2L["b9"]["Position"] = UDim2.new(0.5, 0, 0.44, 0);
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.Shadow.UIGradient
+G2L["ba"] = Instance.new("UIGradient", G2L["b9"]);
+G2L["ba"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.UIGradient
+G2L["bb"] = Instance.new("UIGradient", G2L["b5"]);
+G2L["bb"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
+
+
+-- StarterGui.Strawberry.MainFrame.Minimize.Anim
+G2L["bc"] = Instance.new("LocalScript", G2L["b5"]);
+G2L["bc"]["Name"] = [[Anim]];
+
+
+-- StarterGui.Strawberry.Dragger
+G2L["bd"] = Instance.new("ImageButton", G2L["1"]);
+G2L["bd"]["BorderSizePixel"] = 0;
+G2L["bd"]["Visible"] = false;
+G2L["bd"]["BackgroundTransparency"] = 1;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bd"]["Image"] = [[rbxassetid://10823821676]];
+G2L["bd"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["Name"] = [[Dragger]];
+G2L["bd"]["Position"] = UDim2.new(0.47389, -15, 0.8147, 2);
+
+
+-- StarterGui.Strawberry.Dragger.LocalScript
+G2L["be"] = Instance.new("LocalScript", G2L["bd"]);
+
+
+
+-- StarterGui.Strawberry.Dragger.UIDrag
+G2L["bf"] = Instance.new("LocalScript", G2L["bd"]);
+G2L["bf"]["Name"] = [[UIDrag]];
 
 
 -- StarterGui.Strawberry.MainFrame.Username.Anim
@@ -2482,7 +2575,7 @@ local script = G2L["50"];
 						image.Image = "http://www.roblox.com/asset/?id=8143940984"
 						button.Text = "       "..button.Text
 					end
-	
+
 					button.MouseButton1Click:Connect(function()
 						table.insert(historyStack, currentInstance)
 						currentInstance = child
@@ -2493,10 +2586,10 @@ local script = G2L["50"];
 						delete(child)
 						delete(button)
 					end)
-	
+
 				end
 			end
-	
+
 			backButton.MouseButton1Click:Connect(function()
 				if #historyStack > 0 then
 					currentInstance = table.remove(historyStack)
@@ -2504,7 +2597,7 @@ local script = G2L["50"];
 					scrollingFrame.CanvasPosition = Vector2.new(0,0)
 				end
 			end)
-	
+
 			listChildren(currentInstance)
 		end;
 		task.spawn(C_e);
@@ -2514,7 +2607,7 @@ local script = G2L["50"];
 			local l1 = script.Parent.Parent.WorkspaceList
 			local l2 = script.Parent.Parent.PlayersList
 			local l3 = script.Parent.Parent.RepList
-	
+
 			script.Parent.MouseButton1Click:Connect(function()
 				l1.Visible = true
 				l2.Visible = false
@@ -2528,7 +2621,7 @@ local script = G2L["50"];
 			local l1 = script.Parent.Parent.WorkspaceList
 			local l2 = script.Parent.Parent.PlayersList
 			local l3 = script.Parent.Parent.RepList
-	
+
 			script.Parent.MouseButton1Click:Connect(function()
 				l1.Visible = false
 				l2.Visible = true
@@ -3853,5 +3946,79 @@ local function C_b4()
 
 end;
 task.spawn(C_b4);
+-- StarterGui.Strawberry.MainFrame.Minimize.RE.Check
+local function C_b8()
+	local script = G2L["b8"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Parent.Dragger.Visible = true
+	end)
+
+end;
+task.spawn(C_b8);
+-- StarterGui.Strawberry.MainFrame.Minimize.Anim
+local function C_bc()
+	local script = G2L["bc"];
+	local button = script.Parent
+
+	button.MouseEnter:Connect(function()
+		button:TweenSize(UDim2.new(0, 32,0, 27), "Out", "Quad", 0.1, true)
+	end)
+	button.MouseLeave:Connect(function()
+		button:TweenSize(UDim2.new(0, 30,0, 25), "Out", "Quad", 0.1, true)
+	end)
+
+end;
+task.spawn(C_bc);
+-- StarterGui.Strawberry.Dragger.LocalScript
+local function C_be()
+	local script = G2L["be"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.MainFrame.Visible = true
+	end)
+
+end;
+task.spawn(C_be);
+-- StarterGui.Strawberry.Dragger.UIDrag
+local function C_bf()
+	local script = G2L["bf"];
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+
+end;
+task.spawn(C_bf);
 
 return G2L["1"], require;
