@@ -1,17 +1,17 @@
--- Instances: 191 | Scripts: 39 | Modules: 0 | Tags: 0
+-- Instances: 192 | Scripts: 39 | Modules: 1 | Tags: 0
 local G2L = {};
 
--- StarterGui.Strawberry
+-- StarterGui.StrawberryGUI
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["DisplayOrder"] = 2147483647;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-G2L["1"]["Name"] = [[Strawberry]];
+G2L["1"]["Name"] = [[StrawberryGUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.Strawberry.MainFrame
+-- StarterGui.StrawberryGUI.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 52, 89);
@@ -23,12 +23,12 @@ G2L["2"]["Name"] = [[MainFrame]];
 G2L["2"]["BackgroundTransparency"] = 0.75;
 
 
--- StarterGui.Strawberry.MainFrame.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.UICorner
 G2L["3"] = Instance.new("UICorner", G2L["2"]);
 G2L["3"]["CornerRadius"] = UDim.new(0, 10);
 
 
--- StarterGui.Strawberry.MainFrame.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.Shadow
 G2L["4"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -45,12 +45,12 @@ G2L["4"]["Name"] = [[Shadow]];
 G2L["4"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.Shadow.UIGradient
 G2L["5"] = Instance.new("UIGradient", G2L["4"]);
 G2L["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.Gloss
+-- StarterGui.StrawberryGUI.MainFrame.Gloss
 G2L["6"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["6"]["ZIndex"] = -2147483647;
 G2L["6"]["BorderSizePixel"] = 0;
@@ -66,22 +66,22 @@ G2L["6"]["Name"] = [[Gloss]];
 G2L["6"]["Position"] = UDim2.new(0.50333, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Gloss.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.Gloss.UICorner
 G2L["7"] = Instance.new("UICorner", G2L["6"]);
 G2L["7"]["CornerRadius"] = UDim.new(0, 10);
 
 
--- StarterGui.Strawberry.MainFrame.Gloss.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.Gloss.UIGradient
 G2L["8"] = Instance.new("UIGradient", G2L["6"]);
 G2L["8"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.UIGradient
 G2L["9"] = Instance.new("UIGradient", G2L["2"]);
 G2L["9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.Title
+-- StarterGui.StrawberryGUI.MainFrame.Title
 G2L["a"] = Instance.new("TextLabel", G2L["2"]);
 G2L["a"]["TextWrapped"] = true;
 G2L["a"]["BorderSizePixel"] = 0;
@@ -98,7 +98,7 @@ G2L["a"]["Name"] = [[Title]];
 G2L["a"]["Position"] = UDim2.new(0.22333, 0, 0.02, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Username
+-- StarterGui.StrawberryGUI.MainFrame.Username
 G2L["b"] = Instance.new("TextBox", G2L["2"]);
 G2L["b"]["Name"] = [[Username]];
 G2L["b"]["BorderSizePixel"] = 0;
@@ -115,12 +115,12 @@ G2L["b"]["Text"] = [[]];
 G2L["b"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.Strawberry.MainFrame.Username.Anim
+-- StarterGui.StrawberryGUI.MainFrame.Username.Anim
 G2L["c"] = Instance.new("LocalScript", G2L["b"]);
 G2L["c"]["Name"] = [[Anim]];
 
 
--- StarterGui.Strawberry.MainFrame.Username.BG
+-- StarterGui.StrawberryGUI.MainFrame.Username.BG
 G2L["d"] = Instance.new("Frame", G2L["b"]);
 G2L["d"]["BorderSizePixel"] = 0;
 G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -130,7 +130,7 @@ G2L["d"]["Name"] = [[BG]];
 G2L["d"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.Strawberry.MainFrame.Username.BG.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.Username.BG.Shadow
 G2L["e"] = Instance.new("ImageLabel", G2L["d"]);
 G2L["e"]["BorderSizePixel"] = 0;
 G2L["e"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -147,22 +147,22 @@ G2L["e"]["Name"] = [[Shadow]];
 G2L["e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Username.BG.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.Username.BG.Shadow.UIGradient
 G2L["f"] = Instance.new("UIGradient", G2L["e"]);
 G2L["f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.Username.BG.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.Username.BG.UICorner
 G2L["10"] = Instance.new("UICorner", G2L["d"]);
 G2L["10"]["CornerRadius"] = UDim.new(0, 10);
 
 
--- StarterGui.Strawberry.MainFrame.Username.BG.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.Username.BG.UIGradient
 G2L["11"] = Instance.new("UIGradient", G2L["d"]);
 G2L["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame
 G2L["12"] = Instance.new("ScrollingFrame", G2L["2"]);
 G2L["12"]["Active"] = true;
 G2L["12"]["BorderSizePixel"] = 0;
@@ -178,7 +178,7 @@ G2L["12"]["ScrollBarThickness"] = 10;
 G2L["12"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.UIGridLayout
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.UIGridLayout
 G2L["13"] = Instance.new("UIGridLayout", G2L["12"]);
 G2L["13"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 G2L["13"]["CellSize"] = UDim2.new(1, -35, 0, 40);
@@ -186,7 +186,7 @@ G2L["13"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 G2L["13"]["CellPadding"] = UDim2.new(0, 5, 0, 10);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SubTitle
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SubTitle
 G2L["14"] = Instance.new("TextLabel", G2L["12"]);
 G2L["14"]["TextWrapped"] = true;
 G2L["14"]["BorderSizePixel"] = 0;
@@ -203,7 +203,7 @@ G2L["14"]["Name"] = [[SubTitle]];
 G2L["14"]["Position"] = UDim2.new(0.22667, 0, 0.06857, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald
 G2L["15"] = Instance.new("TextButton", G2L["12"]);
 G2L["15"]["BorderSizePixel"] = 0;
 G2L["15"]["TextSize"] = 18;
@@ -217,12 +217,12 @@ G2L["15"]["Text"] = [[Bald]];
 G2L["15"]["Name"] = [[Bald]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald.UICorner
 G2L["16"] = Instance.new("UICorner", G2L["15"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald.Shadow
 G2L["17"] = Instance.new("ImageLabel", G2L["15"]);
 G2L["17"]["BorderSizePixel"] = 0;
 G2L["17"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -239,17 +239,17 @@ G2L["17"]["Name"] = [[Shadow]];
 G2L["17"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald.Shadow.UIGradient
 G2L["18"] = Instance.new("UIGradient", G2L["17"]);
 G2L["18"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald.LocalScript
 G2L["19"] = Instance.new("LocalScript", G2L["15"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban
 G2L["1a"] = Instance.new("TextButton", G2L["12"]);
 G2L["1a"]["BorderSizePixel"] = 0;
 G2L["1a"]["TextSize"] = 18;
@@ -263,12 +263,12 @@ G2L["1a"]["Text"] = [[Server Ban]];
 G2L["1a"]["Name"] = [[Ban]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban.UICorner
 G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban.Shadow
 G2L["1c"] = Instance.new("ImageLabel", G2L["1a"]);
 G2L["1c"]["BorderSizePixel"] = 0;
 G2L["1c"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -285,17 +285,17 @@ G2L["1c"]["Name"] = [[Shadow]];
 G2L["1c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban.Shadow.UIGradient
 G2L["1d"] = Instance.new("UIGradient", G2L["1c"]);
 G2L["1d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban.LocalScript
 G2L["1e"] = Instance.new("LocalScript", G2L["1a"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead
 G2L["1f"] = Instance.new("TextButton", G2L["12"]);
 G2L["1f"]["BorderSizePixel"] = 0;
 G2L["1f"]["TextSize"] = 18;
@@ -309,12 +309,12 @@ G2L["1f"]["Text"] = [[Blockhead (R6)]];
 G2L["1f"]["Name"] = [[Blockhead]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead.UICorner
 G2L["20"] = Instance.new("UICorner", G2L["1f"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead.Shadow
 G2L["21"] = Instance.new("ImageLabel", G2L["1f"]);
 G2L["21"]["BorderSizePixel"] = 0;
 G2L["21"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -331,17 +331,17 @@ G2L["21"]["Name"] = [[Shadow]];
 G2L["21"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead.Shadow.UIGradient
 G2L["22"] = Instance.new("UIGradient", G2L["21"]);
 G2L["22"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead.LocalScript
 G2L["23"] = Instance.new("LocalScript", G2L["1f"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts
 G2L["24"] = Instance.new("TextButton", G2L["12"]);
 G2L["24"]["BorderSizePixel"] = 0;
 G2L["24"]["TextSize"] = 18;
@@ -355,12 +355,12 @@ G2L["24"]["Text"] = [[Break Games Scripts]];
 G2L["24"]["Name"] = [[Break Games Scripts]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts.UICorner
 G2L["25"] = Instance.new("UICorner", G2L["24"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts.Shadow
 G2L["26"] = Instance.new("ImageLabel", G2L["24"]);
 G2L["26"]["BorderSizePixel"] = 0;
 G2L["26"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -377,17 +377,17 @@ G2L["26"]["Name"] = [[Shadow]];
 G2L["26"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts.Shadow.UIGradient
 G2L["27"] = Instance.new("UIGradient", G2L["26"]);
 G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts.LocalScript
 G2L["28"] = Instance.new("LocalScript", G2L["24"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain
 G2L["29"] = Instance.new("TextButton", G2L["12"]);
 G2L["29"]["BorderSizePixel"] = 0;
 G2L["29"]["TextSize"] = 18;
@@ -401,12 +401,12 @@ G2L["29"]["Text"] = [[Break Terrain]];
 G2L["29"]["Name"] = [[Break Terrain]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain.UICorner
 G2L["2a"] = Instance.new("UICorner", G2L["29"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain.Shadow
 G2L["2b"] = Instance.new("ImageLabel", G2L["29"]);
 G2L["2b"]["BorderSizePixel"] = 0;
 G2L["2b"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -423,17 +423,17 @@ G2L["2b"]["Name"] = [[Shadow]];
 G2L["2b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain.Shadow.UIGradient
 G2L["2c"] = Instance.new("UIGradient", G2L["2b"]);
 G2L["2c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain.LocalScript
 G2L["2d"] = Instance.new("LocalScript", G2L["29"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn
 G2L["2e"] = Instance.new("TextButton", G2L["12"]);
 G2L["2e"]["BorderSizePixel"] = 0;
 G2L["2e"]["TextSize"] = 18;
@@ -447,12 +447,12 @@ G2L["2e"]["Text"] = [[Break Spawnlocations]];
 G2L["2e"]["Name"] = [[BreakSpawn]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn.UICorner
 G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn.Shadow
 G2L["30"] = Instance.new("ImageLabel", G2L["2e"]);
 G2L["30"]["BorderSizePixel"] = 0;
 G2L["30"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -469,17 +469,17 @@ G2L["30"]["Name"] = [[Shadow]];
 G2L["30"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn.Shadow.UIGradient
 G2L["31"] = Instance.new("UIGradient", G2L["30"]);
 G2L["31"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn.LocalScript
 G2L["32"] = Instance.new("LocalScript", G2L["2e"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify
 G2L["33"] = Instance.new("TextButton", G2L["12"]);
 G2L["33"]["BorderSizePixel"] = 0;
 G2L["33"]["TextSize"] = 18;
@@ -493,12 +493,12 @@ G2L["33"]["Text"] = [[Brickify]];
 G2L["33"]["Name"] = [[Brickify]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify.UICorner
 G2L["34"] = Instance.new("UICorner", G2L["33"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify.Shadow
 G2L["35"] = Instance.new("ImageLabel", G2L["33"]);
 G2L["35"]["BorderSizePixel"] = 0;
 G2L["35"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -515,17 +515,17 @@ G2L["35"]["Name"] = [[Shadow]];
 G2L["35"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify.Shadow.UIGradient
 G2L["36"] = Instance.new("UIGradient", G2L["35"]);
 G2L["36"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify.LocalScript
 G2L["37"] = Instance.new("LocalScript", G2L["33"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations
 G2L["38"] = Instance.new("TextButton", G2L["12"]);
 G2L["38"]["BorderSizePixel"] = 0;
 G2L["38"]["TextSize"] = 18;
@@ -539,12 +539,12 @@ G2L["38"]["Text"] = [[Cancel Animations]];
 G2L["38"]["Name"] = [[Cancel Animations]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations.UICorner
 G2L["39"] = Instance.new("UICorner", G2L["38"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations.Shadow
 G2L["3a"] = Instance.new("ImageLabel", G2L["38"]);
 G2L["3a"]["BorderSizePixel"] = 0;
 G2L["3a"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -561,17 +561,17 @@ G2L["3a"]["Name"] = [[Shadow]];
 G2L["3a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations.Shadow.UIGradient
 G2L["3b"] = Instance.new("UIGradient", G2L["3a"]);
 G2L["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations.ex
 G2L["3c"] = Instance.new("LocalScript", G2L["38"]);
 G2L["3c"]["Name"] = [[ex]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user
 G2L["3d"] = Instance.new("TextButton", G2L["12"]);
 G2L["3d"]["BorderSizePixel"] = 0;
 G2L["3d"]["TextSize"] = 18;
@@ -585,12 +585,12 @@ G2L["3d"]["Text"] = [[Click on player to copy user tool]];
 G2L["3d"]["Name"] = [[Click on player to copy user]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user.UICorner
 G2L["3e"] = Instance.new("UICorner", G2L["3d"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user.Shadow
 G2L["3f"] = Instance.new("ImageLabel", G2L["3d"]);
 G2L["3f"]["BorderSizePixel"] = 0;
 G2L["3f"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -607,17 +607,17 @@ G2L["3f"]["Name"] = [[Shadow]];
 G2L["3f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user.Shadow.UIGradient
 G2L["40"] = Instance.new("UIGradient", G2L["3f"]);
 G2L["40"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user.LocalScript
 G2L["41"] = Instance.new("LocalScript", G2L["3d"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS
 G2L["42"] = Instance.new("TextButton", G2L["12"]);
 G2L["42"]["BorderSizePixel"] = 0;
 G2L["42"]["TextSize"] = 18;
@@ -631,12 +631,12 @@ G2L["42"]["Text"] = [[Copy SS Infector]];
 G2L["42"]["Name"] = [[Copy SS]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS.UICorner
 G2L["43"] = Instance.new("UICorner", G2L["42"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS.Shadow
 G2L["44"] = Instance.new("ImageLabel", G2L["42"]);
 G2L["44"]["BorderSizePixel"] = 0;
 G2L["44"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -653,17 +653,17 @@ G2L["44"]["Name"] = [[Shadow]];
 G2L["44"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS.Shadow.UIGradient
 G2L["45"] = Instance.new("UIGradient", G2L["44"]);
 G2L["45"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS.LocalScript
 G2L["46"] = Instance.new("LocalScript", G2L["42"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool
 G2L["47"] = Instance.new("TextButton", G2L["12"]);
 G2L["47"]["BorderSizePixel"] = 0;
 G2L["47"]["TextSize"] = 18;
@@ -677,12 +677,12 @@ G2L["47"]["Text"] = [[Delete Tool (cant give to others)]];
 G2L["47"]["Name"] = [[Delete Tool]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool.UICorner
 G2L["48"] = Instance.new("UICorner", G2L["47"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool.Shadow
 G2L["49"] = Instance.new("ImageLabel", G2L["47"]);
 G2L["49"]["BorderSizePixel"] = 0;
 G2L["49"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -699,17 +699,17 @@ G2L["49"]["Name"] = [[Shadow]];
 G2L["49"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool.Shadow.UIGradient
 G2L["4a"] = Instance.new("UIGradient", G2L["49"]);
 G2L["4a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool.LocalScript
 G2L["4b"] = Instance.new("LocalScript", G2L["47"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer
 G2L["4c"] = Instance.new("TextButton", G2L["12"]);
 G2L["4c"]["BorderSizePixel"] = 0;
 G2L["4c"]["TextSize"] = 18;
@@ -723,12 +723,12 @@ G2L["4c"]["Text"] = [[Dex Explorer (FE delete feature)]];
 G2L["4c"]["Name"] = [[Explorer]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer.UICorner
 G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer.Shadow
 G2L["4e"] = Instance.new("ImageLabel", G2L["4c"]);
 G2L["4e"]["BorderSizePixel"] = 0;
 G2L["4e"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -745,17 +745,17 @@ G2L["4e"]["Name"] = [[Shadow]];
 G2L["4e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer.Shadow.UIGradient
 G2L["4f"] = Instance.new("UIGradient", G2L["4e"]);
 G2L["4f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer.ex
 G2L["50"] = Instance.new("LocalScript", G2L["4c"]);
 G2L["50"]["Name"] = [[ex]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight
 G2L["51"] = Instance.new("TextButton", G2L["12"]);
 G2L["51"]["BorderSizePixel"] = 0;
 G2L["51"]["TextSize"] = 18;
@@ -769,12 +769,12 @@ G2L["51"]["Text"] = [[Flight (works on you only)]];
 G2L["51"]["Name"] = [[Flight]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight.UICorner
 G2L["52"] = Instance.new("UICorner", G2L["51"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight.Shadow
 G2L["53"] = Instance.new("ImageLabel", G2L["51"]);
 G2L["53"]["BorderSizePixel"] = 0;
 G2L["53"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -791,17 +791,17 @@ G2L["53"]["Name"] = [[Shadow]];
 G2L["53"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight.Shadow.UIGradient
 G2L["54"] = Instance.new("UIGradient", G2L["53"]);
 G2L["54"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight.LocalScript
 G2L["55"] = Instance.new("LocalScript", G2L["51"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto
 G2L["56"] = Instance.new("TextButton", G2L["12"]);
 G2L["56"]["BorderSizePixel"] = 0;
 G2L["56"]["TextSize"] = 18;
@@ -815,12 +815,12 @@ G2L["56"]["Text"] = [[Goto]];
 G2L["56"]["Name"] = [[Goto]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto.UICorner
 G2L["57"] = Instance.new("UICorner", G2L["56"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto.Shadow
 G2L["58"] = Instance.new("ImageLabel", G2L["56"]);
 G2L["58"]["BorderSizePixel"] = 0;
 G2L["58"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -837,17 +837,17 @@ G2L["58"]["Name"] = [[Shadow]];
 G2L["58"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto.Shadow.UIGradient
 G2L["59"] = Instance.new("UIGradient", G2L["58"]);
 G2L["59"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto.LocalScript
 G2L["5a"] = Instance.new("LocalScript", G2L["56"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick
 G2L["5b"] = Instance.new("TextButton", G2L["12"]);
 G2L["5b"]["BorderSizePixel"] = 0;
 G2L["5b"]["TextSize"] = 18;
@@ -861,12 +861,12 @@ G2L["5b"]["Text"] = [[Kick]];
 G2L["5b"]["Name"] = [[Kick]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick.UICorner
 G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick.Shadow
 G2L["5d"] = Instance.new("ImageLabel", G2L["5b"]);
 G2L["5d"]["BorderSizePixel"] = 0;
 G2L["5d"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -883,17 +883,17 @@ G2L["5d"]["Name"] = [[Shadow]];
 G2L["5d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick.Shadow.UIGradient
 G2L["5e"] = Instance.new("UIGradient", G2L["5d"]);
 G2L["5e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick.LocalScript
 G2L["5f"] = Instance.new("LocalScript", G2L["5b"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill
 G2L["60"] = Instance.new("TextButton", G2L["12"]);
 G2L["60"]["BorderSizePixel"] = 0;
 G2L["60"]["TextSize"] = 18;
@@ -907,12 +907,12 @@ G2L["60"]["Text"] = [[Kill]];
 G2L["60"]["Name"] = [[Kill]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill.UICorner
 G2L["61"] = Instance.new("UICorner", G2L["60"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill.Shadow
 G2L["62"] = Instance.new("ImageLabel", G2L["60"]);
 G2L["62"]["BorderSizePixel"] = 0;
 G2L["62"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -929,17 +929,17 @@ G2L["62"]["Name"] = [[Shadow]];
 G2L["62"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill.Shadow.UIGradient
 G2L["63"] = Instance.new("UIGradient", G2L["62"]);
 G2L["63"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill.ex
 G2L["64"] = Instance.new("LocalScript", G2L["60"]);
 G2L["64"]["Name"] = [[ex]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox
 G2L["65"] = Instance.new("TextButton", G2L["12"]);
 G2L["65"]["BorderSizePixel"] = 0;
 G2L["65"]["TextSize"] = 18;
@@ -953,12 +953,12 @@ G2L["65"]["Text"] = [[Korblox]];
 G2L["65"]["Name"] = [[Korblox]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox.UICorner
 G2L["66"] = Instance.new("UICorner", G2L["65"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox.Shadow
 G2L["67"] = Instance.new("ImageLabel", G2L["65"]);
 G2L["67"]["BorderSizePixel"] = 0;
 G2L["67"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -975,17 +975,17 @@ G2L["67"]["Name"] = [[Shadow]];
 G2L["67"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox.Shadow.UIGradient
 G2L["68"] = Instance.new("UIGradient", G2L["67"]);
 G2L["68"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox.LocalScript
 G2L["69"] = Instance.new("LocalScript", G2L["65"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked
 G2L["6a"] = Instance.new("TextButton", G2L["12"]);
 G2L["6a"]["BorderSizePixel"] = 0;
 G2L["6a"]["TextSize"] = 18;
@@ -999,12 +999,12 @@ G2L["6a"]["Text"] = [[Naked]];
 G2L["6a"]["Name"] = [[Naked]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked.UICorner
 G2L["6b"] = Instance.new("UICorner", G2L["6a"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked.Shadow
 G2L["6c"] = Instance.new("ImageLabel", G2L["6a"]);
 G2L["6c"]["BorderSizePixel"] = 0;
 G2L["6c"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1021,17 +1021,17 @@ G2L["6c"]["Name"] = [[Shadow]];
 G2L["6c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked.Shadow.UIGradient
 G2L["6d"] = Instance.new("UIGradient", G2L["6c"]);
 G2L["6d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked.LocalScript
 G2L["6e"] = Instance.new("LocalScript", G2L["6a"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs
 G2L["6f"] = Instance.new("TextButton", G2L["12"]);
 G2L["6f"]["BorderSizePixel"] = 0;
 G2L["6f"]["TextSize"] = 18;
@@ -1045,12 +1045,12 @@ G2L["6f"]["Text"] = [[No-limbs]];
 G2L["6f"]["Name"] = [[No-limbs]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs.UICorner
 G2L["70"] = Instance.new("UICorner", G2L["6f"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs.Shadow
 G2L["71"] = Instance.new("ImageLabel", G2L["6f"]);
 G2L["71"]["BorderSizePixel"] = 0;
 G2L["71"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1067,17 +1067,17 @@ G2L["71"]["Name"] = [[Shadow]];
 G2L["71"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs.Shadow.UIGradient
 G2L["72"] = Instance.new("UIGradient", G2L["71"]);
 G2L["72"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs.LocalScript
 G2L["73"] = Instance.new("LocalScript", G2L["6f"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game
 G2L["74"] = Instance.new("TextButton", G2L["12"]);
 G2L["74"]["BorderSizePixel"] = 0;
 G2L["74"]["TextSize"] = 18;
@@ -1091,12 +1091,12 @@ G2L["74"]["Text"] = [[Nuke Game]];
 G2L["74"]["Name"] = [[Nuke Game]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game.UICorner
 G2L["75"] = Instance.new("UICorner", G2L["74"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game.Shadow
 G2L["76"] = Instance.new("ImageLabel", G2L["74"]);
 G2L["76"]["BorderSizePixel"] = 0;
 G2L["76"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1113,17 +1113,17 @@ G2L["76"]["Name"] = [[Shadow]];
 G2L["76"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game.Shadow.UIGradient
 G2L["77"] = Instance.new("UIGradient", G2L["76"]);
 G2L["77"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game.LocalScript
 G2L["78"] = Instance.new("LocalScript", G2L["74"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish
 G2L["79"] = Instance.new("TextButton", G2L["12"]);
 G2L["79"]["BorderSizePixel"] = 0;
 G2L["79"]["TextSize"] = 18;
@@ -1137,12 +1137,12 @@ G2L["79"]["Text"] = [[Punish (delete character)]];
 G2L["79"]["Name"] = [[Punish]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish.UICorner
 G2L["7a"] = Instance.new("UICorner", G2L["79"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish.Shadow
 G2L["7b"] = Instance.new("ImageLabel", G2L["79"]);
 G2L["7b"]["BorderSizePixel"] = 0;
 G2L["7b"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1159,17 +1159,17 @@ G2L["7b"]["Name"] = [[Shadow]];
 G2L["7b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish.Shadow.UIGradient
 G2L["7c"] = Instance.new("UIGradient", G2L["7b"]);
 G2L["7c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish.LocalScript
 G2L["7d"] = Instance.new("LocalScript", G2L["79"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll
 G2L["7e"] = Instance.new("TextButton", G2L["12"]);
 G2L["7e"]["BorderSizePixel"] = 0;
 G2L["7e"]["TextSize"] = 18;
@@ -1183,12 +1183,12 @@ G2L["7e"]["Text"] = [[Ragdoll]];
 G2L["7e"]["Name"] = [[Ragdoll]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll.UICorner
 G2L["7f"] = Instance.new("UICorner", G2L["7e"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll.Shadow
 G2L["80"] = Instance.new("ImageLabel", G2L["7e"]);
 G2L["80"]["BorderSizePixel"] = 0;
 G2L["80"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1205,17 +1205,17 @@ G2L["80"]["Name"] = [[Shadow]];
 G2L["80"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll.Shadow.UIGradient
 G2L["81"] = Instance.new("UIGradient", G2L["80"]);
 G2L["81"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll.LocalScript
 G2L["82"] = Instance.new("LocalScript", G2L["7e"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces
 G2L["83"] = Instance.new("TextButton", G2L["12"]);
 G2L["83"]["BorderSizePixel"] = 0;
 G2L["83"]["TextSize"] = 18;
@@ -1229,12 +1229,12 @@ G2L["83"]["Text"] = [[Remove Face]];
 G2L["83"]["Name"] = [[Remove Faces]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces.UICorner
 G2L["84"] = Instance.new("UICorner", G2L["83"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces.Shadow
 G2L["85"] = Instance.new("ImageLabel", G2L["83"]);
 G2L["85"]["BorderSizePixel"] = 0;
 G2L["85"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1251,17 +1251,17 @@ G2L["85"]["Name"] = [[Shadow]];
 G2L["85"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces.Shadow.UIGradient
 G2L["86"] = Instance.new("UIGradient", G2L["85"]);
 G2L["86"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces.LocalScript
 G2L["87"] = Instance.new("LocalScript", G2L["83"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools
 G2L["88"] = Instance.new("TextButton", G2L["12"]);
 G2L["88"]["BorderSizePixel"] = 0;
 G2L["88"]["TextSize"] = 18;
@@ -1275,12 +1275,12 @@ G2L["88"]["Text"] = [[Remove Tools]];
 G2L["88"]["Name"] = [[Remove Tools]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools.UICorner
 G2L["89"] = Instance.new("UICorner", G2L["88"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools.Shadow
 G2L["8a"] = Instance.new("ImageLabel", G2L["88"]);
 G2L["8a"]["BorderSizePixel"] = 0;
 G2L["8a"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1297,17 +1297,17 @@ G2L["8a"]["Name"] = [[Shadow]];
 G2L["8a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools.Shadow.UIGradient
 G2L["8b"] = Instance.new("UIGradient", G2L["8a"]);
 G2L["8b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools.ex
 G2L["8c"] = Instance.new("LocalScript", G2L["88"]);
 G2L["8c"]["Name"] = [[ex]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds
 G2L["8d"] = Instance.new("TextButton", G2L["12"]);
 G2L["8d"]["BorderSizePixel"] = 0;
 G2L["8d"]["TextSize"] = 18;
@@ -1321,12 +1321,12 @@ G2L["8d"]["Text"] = [[Remove all sounds (FE)]];
 G2L["8d"]["Name"] = [[Remove all sounds]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds.UICorner
 G2L["8e"] = Instance.new("UICorner", G2L["8d"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds.Shadow
 G2L["8f"] = Instance.new("ImageLabel", G2L["8d"]);
 G2L["8f"]["BorderSizePixel"] = 0;
 G2L["8f"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1343,17 +1343,17 @@ G2L["8f"]["Name"] = [[Shadow]];
 G2L["8f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds.Shadow.UIGradient
 G2L["90"] = Instance.new("UIGradient", G2L["8f"]);
 G2L["90"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds.LocalScript
 G2L["91"] = Instance.new("LocalScript", G2L["8d"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting
 G2L["92"] = Instance.new("TextButton", G2L["12"]);
 G2L["92"]["BorderSizePixel"] = 0;
 G2L["92"]["TextSize"] = 18;
@@ -1367,12 +1367,12 @@ G2L["92"]["Text"] = [[Remove sky and lighting (FE)]];
 G2L["92"]["Name"] = [[Remove lighting]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting.UICorner
 G2L["93"] = Instance.new("UICorner", G2L["92"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting.Shadow
 G2L["94"] = Instance.new("ImageLabel", G2L["92"]);
 G2L["94"]["BorderSizePixel"] = 0;
 G2L["94"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1389,17 +1389,17 @@ G2L["94"]["Name"] = [[Shadow]];
 G2L["94"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting.Shadow.UIGradient
 G2L["95"] = Instance.new("UIGradient", G2L["94"]);
 G2L["95"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting.LocalScript
 G2L["96"] = Instance.new("LocalScript", G2L["92"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui
 G2L["97"] = Instance.new("TextButton", G2L["12"]);
 G2L["97"]["BorderSizePixel"] = 0;
 G2L["97"]["TextSize"] = 18;
@@ -1413,12 +1413,12 @@ G2L["97"]["Text"] = [[Remove player UI]];
 G2L["97"]["Name"] = [[Remove players gui]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui.UICorner
 G2L["98"] = Instance.new("UICorner", G2L["97"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui.Shadow
 G2L["99"] = Instance.new("ImageLabel", G2L["97"]);
 G2L["99"]["BorderSizePixel"] = 0;
 G2L["99"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1435,17 +1435,17 @@ G2L["99"]["Name"] = [[Shadow]];
 G2L["99"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui.Shadow.UIGradient
 G2L["9a"] = Instance.new("UIGradient", G2L["99"]);
 G2L["9a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui.LocalScript
 G2L["9b"] = Instance.new("LocalScript", G2L["97"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock
 G2L["9c"] = Instance.new("TextButton", G2L["12"]);
 G2L["9c"]["BorderSizePixel"] = 0;
 G2L["9c"]["TextSize"] = 18;
@@ -1459,12 +1459,12 @@ G2L["9c"]["Text"] = [[ServerLock: Off]];
 G2L["9c"]["Name"] = [[SLock]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock.UICorner
 G2L["9d"] = Instance.new("UICorner", G2L["9c"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock.Shadow
 G2L["9e"] = Instance.new("ImageLabel", G2L["9c"]);
 G2L["9e"]["BorderSizePixel"] = 0;
 G2L["9e"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1481,17 +1481,17 @@ G2L["9e"]["Name"] = [[Shadow]];
 G2L["9e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock.Shadow.UIGradient
 G2L["9f"] = Instance.new("UIGradient", G2L["9e"]);
 G2L["9f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock.LocalScript
 G2L["a0"] = Instance.new("LocalScript", G2L["9c"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist
 G2L["a1"] = Instance.new("TextButton", G2L["12"]);
 G2L["a1"]["BorderSizePixel"] = 0;
 G2L["a1"]["TextSize"] = 18;
@@ -1505,12 +1505,12 @@ G2L["a1"]["Text"] = [[Delete Waist (R15)]];
 G2L["a1"]["Name"] = [[Waist]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist.UICorner
 G2L["a2"] = Instance.new("UICorner", G2L["a1"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist.Shadow
 G2L["a3"] = Instance.new("ImageLabel", G2L["a1"]);
 G2L["a3"]["BorderSizePixel"] = 0;
 G2L["a3"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1527,17 +1527,17 @@ G2L["a3"]["Name"] = [[Shadow]];
 G2L["a3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist.Shadow.UIGradient
 G2L["a4"] = Instance.new("UIGradient", G2L["a3"]);
 G2L["a4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist.LocalScript
 G2L["a5"] = Instance.new("LocalScript", G2L["a1"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring
 G2L["a6"] = Instance.new("TextButton", G2L["12"]);
 G2L["a6"]["BorderSizePixel"] = 0;
 G2L["a6"]["TextSize"] = 18;
@@ -1551,12 +1551,12 @@ G2L["a6"]["Text"] = [[Bring (tool required)]];
 G2L["a6"]["Name"] = [[Bring]];
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring.UICorner
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring.UICorner
 G2L["a7"] = Instance.new("UICorner", G2L["a6"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring.Shadow
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring.Shadow
 G2L["a8"] = Instance.new("ImageLabel", G2L["a6"]);
 G2L["a8"]["BorderSizePixel"] = 0;
 G2L["a8"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
@@ -1573,190 +1573,223 @@ G2L["a8"]["Name"] = [[Shadow]];
 G2L["a8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring.Shadow.UIGradient
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring.Shadow.UIGradient
 G2L["a9"] = Instance.new("UIGradient", G2L["a8"]);
 G2L["a9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring.LocalScript
 G2L["aa"] = Instance.new("LocalScript", G2L["a6"]);
 
 
 
--- StarterGui.Strawberry.MainFrame.Check
-G2L["ab"] = Instance.new("Frame", G2L["2"]);
-G2L["ab"]["ZIndex"] = 2;
-G2L["ab"]["BorderSizePixel"] = 0;
-G2L["ab"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ab"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ab"]["Size"] = UDim2.new(0, 30, 0, 30);
-G2L["ab"]["Position"] = UDim2.new(0.783, 10, 0.171, 0);
-G2L["ab"]["Name"] = [[Check]];
-G2L["ab"]["BackgroundTransparency"] = 0.5;
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete
+G2L["ab"] = Instance.new("ModuleScript", G2L["12"]);
+G2L["ab"]["Name"] = [[Delete]];
 
 
--- StarterGui.Strawberry.MainFrame.Check.UICorner
-G2L["ac"] = Instance.new("UICorner", G2L["ab"]);
-G2L["ac"]["CornerRadius"] = UDim.new(0, 10);
+-- StarterGui.StrawberryGUI.MainFrame.Check
+G2L["ac"] = Instance.new("Frame", G2L["2"]);
+G2L["ac"]["ZIndex"] = 2;
+G2L["ac"]["BorderSizePixel"] = 0;
+G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ac"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ac"]["Size"] = UDim2.new(0, 30, 0, 30);
+G2L["ac"]["Position"] = UDim2.new(0.783, 10, 0.171, 0);
+G2L["ac"]["Name"] = [[Check]];
+G2L["ac"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.Strawberry.MainFrame.Check.RE
-G2L["ad"] = Instance.new("ImageButton", G2L["ab"]);
-G2L["ad"]["BorderSizePixel"] = 0;
-G2L["ad"]["BackgroundTransparency"] = 1;
+-- StarterGui.StrawberryGUI.MainFrame.Check.UICorner
+G2L["ad"] = Instance.new("UICorner", G2L["ac"]);
+G2L["ad"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.StrawberryGUI.MainFrame.Check.RE
+G2L["ae"] = Instance.new("ImageButton", G2L["ac"]);
+G2L["ae"]["BorderSizePixel"] = 0;
+G2L["ae"]["BackgroundTransparency"] = 1;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-G2L["ad"]["ZIndex"] = 3;
-G2L["ad"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ad"]["Image"] = [[http://www.roblox.com/asset/?id=6353957304]];
-G2L["ad"]["Size"] = UDim2.new(1, -14, 1, -14);
-G2L["ad"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["ad"]["Name"] = [[RE]];
-G2L["ad"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["ae"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+G2L["ae"]["ZIndex"] = 3;
+G2L["ae"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ae"]["Image"] = [[http://www.roblox.com/asset/?id=6353957304]];
+G2L["ae"]["Size"] = UDim2.new(1, -14, 1, -14);
+G2L["ae"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["ae"]["Name"] = [[RE]];
+G2L["ae"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Check.RE.Check
-G2L["ae"] = Instance.new("LocalScript", G2L["ad"]);
-G2L["ae"]["Name"] = [[Check]];
+-- StarterGui.StrawberryGUI.MainFrame.Check.RE.Check
+G2L["af"] = Instance.new("LocalScript", G2L["ae"]);
+G2L["af"]["Name"] = [[Check]];
 
 
--- StarterGui.Strawberry.MainFrame.Check.Shadow
-G2L["af"] = Instance.new("ImageLabel", G2L["ab"]);
-G2L["af"]["BorderSizePixel"] = 0;
-G2L["af"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
-G2L["af"]["SliceScale"] = 0.1;
-G2L["af"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["af"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["af"]["ImageTransparency"] = 0.5;
+-- StarterGui.StrawberryGUI.MainFrame.Check.Shadow
+G2L["b0"] = Instance.new("ImageLabel", G2L["ac"]);
+G2L["b0"]["BorderSizePixel"] = 0;
+G2L["b0"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
+G2L["b0"]["SliceScale"] = 0.1;
+G2L["b0"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["ImageTransparency"] = 0.5;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["af"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["af"]["Image"] = [[http://www.roblox.com/asset/?id=13960012399]];
-G2L["af"]["Size"] = UDim2.new(1, 18, 1, 18);
-G2L["af"]["BackgroundTransparency"] = 1;
-G2L["af"]["Name"] = [[Shadow]];
-G2L["af"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["b0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b0"]["Image"] = [[http://www.roblox.com/asset/?id=13960012399]];
+G2L["b0"]["Size"] = UDim2.new(1, 18, 1, 18);
+G2L["b0"]["BackgroundTransparency"] = 1;
+G2L["b0"]["Name"] = [[Shadow]];
+G2L["b0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Check.Shadow.UIGradient
-G2L["b0"] = Instance.new("UIGradient", G2L["af"]);
-G2L["b0"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
-
-
--- StarterGui.Strawberry.MainFrame.Check.UIGradient
-G2L["b1"] = Instance.new("UIGradient", G2L["ab"]);
+-- StarterGui.StrawberryGUI.MainFrame.Check.Shadow.UIGradient
+G2L["b1"] = Instance.new("UIGradient", G2L["b0"]);
 G2L["b1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.Check.Anim
-G2L["b2"] = Instance.new("LocalScript", G2L["ab"]);
-G2L["b2"]["Name"] = [[Anim]];
+-- StarterGui.StrawberryGUI.MainFrame.Check.UIGradient
+G2L["b2"] = Instance.new("UIGradient", G2L["ac"]);
+G2L["b2"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.UIDrag
-G2L["b3"] = Instance.new("LocalScript", G2L["2"]);
-G2L["b3"]["Name"] = [[UIDrag]];
+-- StarterGui.StrawberryGUI.MainFrame.Check.Anim
+G2L["b3"] = Instance.new("LocalScript", G2L["ac"]);
+G2L["b3"]["Name"] = [[Anim]];
 
 
--- StarterGui.Strawberry.MainFrame.MainHandler
+-- StarterGui.StrawberryGUI.MainFrame.UIDrag
 G2L["b4"] = Instance.new("LocalScript", G2L["2"]);
-G2L["b4"]["Name"] = [[MainHandler]];
+G2L["b4"]["Name"] = [[UIDrag]];
 
 
--- StarterGui.Strawberry.MainFrame.Minimize
-G2L["b5"] = Instance.new("Frame", G2L["2"]);
-G2L["b5"]["ZIndex"] = 2;
-G2L["b5"]["BorderSizePixel"] = 0;
-G2L["b5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b5"]["Size"] = UDim2.new(0, 30, 0, 25);
-G2L["b5"]["Position"] = UDim2.new(0.95633, 10, 0.00787, 0);
-G2L["b5"]["Name"] = [[Minimize]];
-G2L["b5"]["BackgroundTransparency"] = 0.5;
+-- StarterGui.StrawberryGUI.MainFrame.MainHandler
+G2L["b5"] = Instance.new("LocalScript", G2L["2"]);
+G2L["b5"]["Name"] = [[MainHandler]];
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.UICorner
-G2L["b6"] = Instance.new("UICorner", G2L["b5"]);
-G2L["b6"]["CornerRadius"] = UDim.new(0, 10);
+-- StarterGui.StrawberryGUI.MainFrame.Minimize
+G2L["b6"] = Instance.new("Frame", G2L["2"]);
+G2L["b6"]["ZIndex"] = 2;
+G2L["b6"]["BorderSizePixel"] = 0;
+G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b6"]["Size"] = UDim2.new(0, 30, 0, 25);
+G2L["b6"]["Position"] = UDim2.new(0.95633, 10, 0.00787, 0);
+G2L["b6"]["Name"] = [[Minimize]];
+G2L["b6"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.RE
-G2L["b7"] = Instance.new("ImageButton", G2L["b5"]);
-G2L["b7"]["BorderSizePixel"] = 0;
-G2L["b7"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["b7"]["BackgroundTransparency"] = 1;
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.UICorner
+G2L["b7"] = Instance.new("UICorner", G2L["b6"]);
+G2L["b7"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.RE
+G2L["b8"] = Instance.new("ImageButton", G2L["b6"]);
+G2L["b8"]["BorderSizePixel"] = 0;
+G2L["b8"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["b8"]["BackgroundTransparency"] = 1;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["b7"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-G2L["b7"]["ZIndex"] = 3;
-G2L["b7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b7"]["Image"] = [[rbxassetid://16423157073]];
-G2L["b7"]["Size"] = UDim2.new(1, -14, 1, -14);
-G2L["b7"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["b7"]["Name"] = [[RE]];
-G2L["b7"]["Position"] = UDim2.new(0.5, 0, 0.46667, 0);
+G2L["b8"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+G2L["b8"]["ZIndex"] = 3;
+G2L["b8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b8"]["Image"] = [[rbxassetid://16423157073]];
+G2L["b8"]["Size"] = UDim2.new(1, -14, 1, -14);
+G2L["b8"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["b8"]["Name"] = [[RE]];
+G2L["b8"]["Position"] = UDim2.new(0.5, 0, 0.46667, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.RE.Check
-G2L["b8"] = Instance.new("LocalScript", G2L["b7"]);
-G2L["b8"]["Name"] = [[Check]];
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.RE.Check
+G2L["b9"] = Instance.new("LocalScript", G2L["b8"]);
+G2L["b9"]["Name"] = [[Check]];
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.Shadow
-G2L["b9"] = Instance.new("ImageLabel", G2L["b5"]);
-G2L["b9"]["BorderSizePixel"] = 0;
-G2L["b9"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
-G2L["b9"]["SliceScale"] = 0.1;
-G2L["b9"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b9"]["ImageTransparency"] = 0.5;
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.Shadow
+G2L["ba"] = Instance.new("ImageLabel", G2L["b6"]);
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["SliceCenter"] = Rect.new(200, 200, 500, 500);
+G2L["ba"]["SliceScale"] = 0.1;
+G2L["ba"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["ImageTransparency"] = 0.5;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["b9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b9"]["Image"] = [[http://www.roblox.com/asset/?id=13960012399]];
-G2L["b9"]["Size"] = UDim2.new(1, 18, 1, 18);
-G2L["b9"]["BackgroundTransparency"] = 1;
-G2L["b9"]["Name"] = [[Shadow]];
-G2L["b9"]["Position"] = UDim2.new(0.5, 0, 0.44, 0);
+G2L["ba"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ba"]["Image"] = [[http://www.roblox.com/asset/?id=13960012399]];
+G2L["ba"]["Size"] = UDim2.new(1, 18, 1, 18);
+G2L["ba"]["BackgroundTransparency"] = 1;
+G2L["ba"]["Name"] = [[Shadow]];
+G2L["ba"]["Position"] = UDim2.new(0.5, 0, 0.44, 0);
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.Shadow.UIGradient
-G2L["ba"] = Instance.new("UIGradient", G2L["b9"]);
-G2L["ba"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
-
-
--- StarterGui.Strawberry.MainFrame.Minimize.UIGradient
-G2L["bb"] = Instance.new("UIGradient", G2L["b5"]);
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.Shadow.UIGradient
+G2L["bb"] = Instance.new("UIGradient", G2L["ba"]);
 G2L["bb"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.MainFrame.Minimize.Anim
-G2L["bc"] = Instance.new("LocalScript", G2L["b5"]);
-G2L["bc"]["Name"] = [[Anim]];
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.UIGradient
+G2L["bc"] = Instance.new("UIGradient", G2L["b6"]);
+G2L["bc"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 52, 89)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 52, 89))};
 
 
--- StarterGui.Strawberry.Dragger
-G2L["bd"] = Instance.new("ImageButton", G2L["1"]);
-G2L["bd"]["BorderSizePixel"] = 0;
-G2L["bd"]["Visible"] = false;
-G2L["bd"]["BackgroundTransparency"] = 1;
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.Anim
+G2L["bd"] = Instance.new("LocalScript", G2L["b6"]);
+G2L["bd"]["Name"] = [[Anim]];
+
+
+-- StarterGui.StrawberryGUI.Dragger
+G2L["be"] = Instance.new("ImageButton", G2L["1"]);
+G2L["be"]["BorderSizePixel"] = 0;
+G2L["be"]["Visible"] = false;
+G2L["be"]["BackgroundTransparency"] = 1;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["bd"]["Image"] = [[rbxassetid://10823821676]];
-G2L["bd"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bd"]["Name"] = [[Dragger]];
-G2L["bd"]["Position"] = UDim2.new(0.47389, -15, 0.8147, 2);
+G2L["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["be"]["Image"] = [[rbxassetid://10823821676]];
+G2L["be"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["be"]["Name"] = [[Dragger]];
+G2L["be"]["Position"] = UDim2.new(0.47389, -15, 0.8147, 2);
 
 
--- StarterGui.Strawberry.Dragger.LocalScript
-G2L["be"] = Instance.new("LocalScript", G2L["bd"]);
+-- StarterGui.StrawberryGUI.Dragger.LocalScript
+G2L["bf"] = Instance.new("LocalScript", G2L["be"]);
 
 
 
--- StarterGui.Strawberry.Dragger.UIDrag
-G2L["bf"] = Instance.new("LocalScript", G2L["bd"]);
-G2L["bf"]["Name"] = [[UIDrag]];
+-- StarterGui.StrawberryGUI.Dragger.UIDrag
+G2L["c0"] = Instance.new("LocalScript", G2L["be"]);
+G2L["c0"]["Name"] = [[UIDrag]];
 
 
--- StarterGui.Strawberry.MainFrame.Username.Anim
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["ab"]] = {
+Closure = function()
+    local script = G2L["ab"];local module = {}
+
+function module:Delete(instance)
+	local remote = game.Players.LocalPlayer:FindFirstChild("StrawberryHook").Value
+	remote:FireServer(instance)
+end
+
+return module
+
+end;
+};
+-- StarterGui.StrawberryGUI.MainFrame.Username.Anim
 local function C_c()
 local script = G2L["c"];
 	local button = script.Parent
@@ -1769,11 +1802,12 @@ local script = G2L["c"];
 	end)
 end;
 task.spawn(C_c);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bald.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bald.LocalScript
 local function C_19()
 local script = G2L["19"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	local Players = game:GetService("Players")
@@ -1824,11 +1858,12 @@ local script = G2L["19"];
 	
 end;
 task.spawn(C_19);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ban.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ban.LocalScript
 local function C_1e()
 local script = G2L["1e"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	local bannedplayers = {}
@@ -1875,11 +1910,12 @@ local script = G2L["1e"];
 	
 end;
 task.spawn(C_1e);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Blockhead.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Blockhead.LocalScript
 local function C_23()
 local script = G2L["23"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1914,11 +1950,12 @@ local script = G2L["23"];
 	
 end;
 task.spawn(C_23);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Games Scripts.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Games Scripts.LocalScript
 local function C_28()
 local script = G2L["28"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1940,11 +1977,12 @@ local script = G2L["28"];
 	
 end;
 task.spawn(C_28);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Break Terrain.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Break Terrain.LocalScript
 local function C_2d()
 local script = G2L["2d"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1953,11 +1991,12 @@ local script = G2L["2d"];
 	
 end;
 task.spawn(C_2d);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.BreakSpawn.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.BreakSpawn.LocalScript
 local function C_32()
 local script = G2L["32"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1970,11 +2009,12 @@ local script = G2L["32"];
 	
 end;
 task.spawn(C_32);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Brickify.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Brickify.LocalScript
 local function C_37()
 local script = G2L["37"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2008,11 +2048,12 @@ local script = G2L["37"];
 	
 end;
 task.spawn(C_37);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Cancel Animations.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Cancel Animations.ex
 local function C_3c()
 local script = G2L["3c"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2046,11 +2087,12 @@ local script = G2L["3c"];
 	
 end;
 task.spawn(C_3c);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Click on player to copy user.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Click on player to copy user.LocalScript
 local function C_41()
 local script = G2L["41"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2089,11 +2131,12 @@ local script = G2L["41"];
 	
 end;
 task.spawn(C_41);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Copy SS.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Copy SS.LocalScript
 local function C_46()
 local script = G2L["46"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2111,11 +2154,12 @@ local script = G2L["46"];
 	
 end;
 task.spawn(C_46);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Delete Tool.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Delete Tool.LocalScript
 local function C_4b()
 local script = G2L["4b"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2150,11 +2194,12 @@ local script = G2L["4b"];
 	
 end;
 task.spawn(C_4b);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Explorer.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Explorer.ex
 local function C_50()
 local script = G2L["50"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2487,13 +2532,13 @@ local script = G2L["50"];
 			local script = G2L["c"];
 			script.Parent.Visible = true
 			wait(1)
-	
+
 			local f = script.Parent
 			local x1 = f.One
 			local x2 = f.Two
-	
+
 			local a = 10
-	
+
 			repeat
 				f.BackgroundTransparency = math.clamp(f.BackgroundTransparency + 0.1, 0, 1)
 				x1.TextTransparency = math.clamp(x1.TextTransparency + 0.1, 0, 1)
@@ -2501,7 +2546,7 @@ local script = G2L["50"];
 				a = a - 1
 				wait(0.02)
 			until a <= 0
-	
+
 		end;
 		task.spawn(C_c);
 		-- StarterGui.Explorer V2 (OLD).MainFrame.WSList
@@ -2510,10 +2555,10 @@ local script = G2L["50"];
 			local scrollingFrame = script.Parent.WorkspaceList
 			local backButton = script.Parent.BackButton
 			local listLayout = scrollingFrame:WaitForChild("UIListLayout")
-	
+
 			local currentInstance = workspace
 			local historyStack = {}
-	
+
 			local function clearButtons()
 				for _, child in ipairs(scrollingFrame:GetChildren()) do
 					if child:IsA("TextButton") then
@@ -2521,10 +2566,10 @@ local script = G2L["50"];
 					end
 				end
 			end
-	
+
 			local function listChildren(parentInstance)
 				clearButtons()
-	
+
 				for _, child in ipairs(parentInstance:GetChildren()) do
 					local button = Instance.new("TextButton")
 					button.Name = child.Name
@@ -2843,11 +2888,12 @@ local script = G2L["50"];
 
 end;
 task.spawn(C_50);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Flight.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Flight.LocalScript
 local function C_55()
 	local script = G2L["55"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	flying = false
@@ -2947,11 +2993,12 @@ local function C_55()
 
 end;
 task.spawn(C_55);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Goto.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Goto.LocalScript
 local function C_5a()
 	local script = G2L["5a"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2965,11 +3012,12 @@ local function C_5a()
 
 end;
 task.spawn(C_5a);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kick.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kick.LocalScript
 local function C_5f()
 	local script = G2L["5f"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3003,11 +3051,12 @@ local function C_5f()
 
 end;
 task.spawn(C_5f);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Kill.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Kill.ex
 local function C_64()
 	local script = G2L["64"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3041,11 +3090,12 @@ local function C_64()
 
 end;
 task.spawn(C_64);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Korblox.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Korblox.LocalScript
 local function C_69()
 	local script = G2L["69"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3143,11 +3193,12 @@ local function C_69()
 
 end;
 task.spawn(C_69);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Naked.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Naked.LocalScript
 local function C_6e()
 	local script = G2L["6e"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	local Players = game:GetService("Players")
@@ -3198,11 +3249,12 @@ local function C_6e()
 
 end;
 task.spawn(C_6e);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.No-limbs.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.No-limbs.LocalScript
 local function C_73()
 	local script = G2L["73"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3312,11 +3364,12 @@ local function C_73()
 
 end;
 task.spawn(C_73);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Nuke Game.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Nuke Game.LocalScript
 local function C_78()
 	local script = G2L["78"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3334,11 +3387,12 @@ local function C_78()
 
 end;
 task.spawn(C_78);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Punish.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Punish.LocalScript
 local function C_7d()
 	local script = G2L["7d"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3372,11 +3426,12 @@ local function C_7d()
 
 end;
 task.spawn(C_7d);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Ragdoll.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Ragdoll.LocalScript
 local function C_82()
 	local script = G2L["82"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3410,11 +3465,12 @@ local function C_82()
 
 end;
 task.spawn(C_82);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Faces.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Faces.LocalScript
 local function C_87()
 	local script = G2L["87"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	local Players = game:GetService("Players")
@@ -3465,11 +3521,12 @@ local function C_87()
 
 end;
 task.spawn(C_87);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove Tools.ex
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove Tools.ex
 local function C_8c()
 	local script = G2L["8c"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3531,11 +3588,12 @@ local function C_8c()
 
 end;
 task.spawn(C_8c);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove all sounds.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove all sounds.LocalScript
 local function C_91()
 	local script = G2L["91"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3548,11 +3606,12 @@ local function C_91()
 
 end;
 task.spawn(C_91);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove lighting.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove lighting.LocalScript
 local function C_96()
 	local script = G2L["96"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3569,11 +3628,12 @@ local function C_96()
 
 end;
 task.spawn(C_96);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Remove players gui.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Remove players gui.LocalScript
 local function C_9b()
 	local script = G2L["9b"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	local Players = game:GetService("Players")
@@ -3610,11 +3670,12 @@ local function C_9b()
 
 end;
 task.spawn(C_9b);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.SLock.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.SLock.LocalScript
 local function C_a0()
 	local script = G2L["a0"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	local function notif(msg,dur)
@@ -3661,11 +3722,12 @@ local function C_a0()
 
 end;
 task.spawn(C_a0);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Waist.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Waist.LocalScript
 local function C_a5()
 	local script = G2L["a5"];
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3711,7 +3773,7 @@ local function C_a5()
 
 end;
 task.spawn(C_a5);
--- StarterGui.Strawberry.MainFrame.ScrollingFrame.Bring.LocalScript
+-- StarterGui.StrawberryGUI.MainFrame.ScrollingFrame.Bring.LocalScript
 local function C_aa()
 	local script = G2L["aa"];
 	local Players = game:GetService("Players")
@@ -3736,7 +3798,8 @@ local function C_aa()
 	end
 
 	local function delete(item)
-		shared.strawberryhook(item)
+		local module = require(script.Parent.Parent.Delete)
+		module:Delete(item)
 	end
 
 	local function bringPlayers(plrs)
@@ -3839,9 +3902,9 @@ local function C_aa()
 
 end;
 task.spawn(C_aa);
--- StarterGui.Strawberry.MainFrame.Check.RE.Check
-local function C_ae()
-	local script = G2L["ae"];
+-- StarterGui.StrawberryGUI.MainFrame.Check.RE.Check
+local function C_af()
+	local script = G2L["af"];
 	local Players = game:GetService("Players")
 	local textBox = script.Parent.Parent.Parent.Username
 
@@ -3878,10 +3941,10 @@ local function C_ae()
 		end
 	end)
 end;
-task.spawn(C_ae);
--- StarterGui.Strawberry.MainFrame.Check.Anim
-local function C_b2()
-	local script = G2L["b2"];
+task.spawn(C_af);
+-- StarterGui.StrawberryGUI.MainFrame.Check.Anim
+local function C_b3()
+	local script = G2L["b3"];
 	local button = script.Parent
 
 	button.MouseEnter:Connect(function()
@@ -3891,10 +3954,10 @@ local function C_b2()
 		button:TweenSize(UDim2.new(0, 30,0, 30), "Out", "Quad", 0.1, true)
 	end)
 end;
-task.spawn(C_b2);
--- StarterGui.Strawberry.MainFrame.UIDrag
-local function C_b3()
-	local script = G2L["b3"];
+task.spawn(C_b3);
+-- StarterGui.StrawberryGUI.MainFrame.UIDrag
+local function C_b4()
+	local script = G2L["b4"];
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
@@ -3931,10 +3994,10 @@ local function C_b3()
 	end)
 
 end;
-task.spawn(C_b3);
--- StarterGui.Strawberry.MainFrame.MainHandler
-local function C_b4()
-	local script = G2L["b4"];
+task.spawn(C_b4);
+-- StarterGui.StrawberryGUI.MainFrame.MainHandler
+local function C_b5()
+	local script = G2L["b5"];
 	local commandcount = 0
 	for i, v in pairs(script.Parent.ScrollingFrame:GetChildren()) do
 		if v:IsA("TextButton") then
@@ -3945,20 +4008,20 @@ local function C_b4()
 	script.Parent.ScrollingFrame.SubTitle.Text = script.Parent.ScrollingFrame.SubTitle.Text.."\n("..tostring(commandcount).." commands loaded!)"
 
 end;
-task.spawn(C_b4);
--- StarterGui.Strawberry.MainFrame.Minimize.RE.Check
-local function C_b8()
-	local script = G2L["b8"];
+task.spawn(C_b5);
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.RE.Check
+local function C_b9()
+	local script = G2L["b9"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Visible = false
 		script.Parent.Parent.Parent.Parent.Dragger.Visible = true
 	end)
 
 end;
-task.spawn(C_b8);
--- StarterGui.Strawberry.MainFrame.Minimize.Anim
-local function C_bc()
-	local script = G2L["bc"];
+task.spawn(C_b9);
+-- StarterGui.StrawberryGUI.MainFrame.Minimize.Anim
+local function C_bd()
+	local script = G2L["bd"];
 	local button = script.Parent
 
 	button.MouseEnter:Connect(function()
@@ -3969,20 +4032,20 @@ local function C_bc()
 	end)
 
 end;
-task.spawn(C_bc);
--- StarterGui.Strawberry.Dragger.LocalScript
-local function C_be()
-	local script = G2L["be"];
+task.spawn(C_bd);
+-- StarterGui.StrawberryGUI.Dragger.LocalScript
+local function C_bf()
+	local script = G2L["bf"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		script.Parent.Parent.MainFrame.Visible = true
 	end)
 
 end;
-task.spawn(C_be);
--- StarterGui.Strawberry.Dragger.UIDrag
-local function C_bf()
-	local script = G2L["bf"];
+task.spawn(C_bf);
+-- StarterGui.StrawberryGUI.Dragger.UIDrag
+local function C_c0()
+	local script = G2L["c0"];
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
@@ -4019,6 +4082,6 @@ local function C_bf()
 	end)
 
 end;
-task.spawn(C_bf);
+task.spawn(C_c0);
 
 return G2L["1"], require;
