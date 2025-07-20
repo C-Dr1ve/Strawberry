@@ -126,9 +126,7 @@ G2L["c"]["Name"] = [[Remote]];
 
 -- StarterGui.Strawberry.Main.Toggle
 G2L["d"] = Instance.new("LocalScript", G2L["2"]);
-G2L["d"]["Enabled"] = false;
 G2L["d"]["Name"] = [[Toggle]];
-G2L["d"]["Disabled"] = true;
 
 
 -- StarterGui.Strawberry.Main.CommandManager
@@ -349,34 +347,36 @@ local script = G2L["b"];
 		
 		testfire(testpart)
 		task.wait(ScanSafeTime)
-		if isDestroyed(testpart) then
+		if isDestroyed(testpart) == true then
 			return true
-		else
+		elseif isDestroyed(testpart) == false then
 			return false
 		end
 	end
 	
-	local function ScanLocation(location)
+	local function ScanLocation(locations)
 		local count = 0
-		for i, v in pairs(location:GetDescendants()) do
-			if v:IsA("RemoteEvent") then
-				count += 1
-				ScanMessage.Text = 'Scanning '..location.Name..' for vulnerabilities <font transparency="0.5">(0/'..count..') remotes scanned</font>'
-			end
-		end
-		
-		local scancount = 0
-		for i, v in pairs(location:GetDescendants()) do
-			if v:IsA("RemoteEvent") then
-				scancount += 1
-				ScanMessage.Text = 'Scanning '..location.Name..' for vulnerabilities <font transparency="0.5">('..scancount..'/'..count..') remotes scanned</font>'
-				if IsBackdoored(v) then
-					return v
+		for i, location in pairs(locations) do
+			for i, v in pairs(location:GetDescendants()) do
+				if v:IsA("RemoteEvent") then
+					count += 1
+					ScanMessage.Text = 'Scanning '..location.Name..' for vulnerabilities <font transparency="0.5">(0/'..count..') remotes scanned</font>'
 				end
 			end
+			
+			local scancount = 0
+			for i, v in pairs(location:GetDescendants()) do
+				if v:IsA("RemoteEvent") then
+					scancount += 1
+					ScanMessage.Text = 'Scanning '..location.Name..' for vulnerabilities <font transparency="0.5">('..scancount..'/'..count..') remotes scanned</font>'
+					if IsBackdoored(v) then
+						return v
+					end
+				end
+			end
+	
+			return nil
 		end
-		
-		return nil
 	end
 	
 	local function TweenOut()
@@ -391,7 +391,7 @@ local script = G2L["b"];
 		Tween:Play()
 	end
 	
-	local ScanResult = ScanLocation(ReplicatedStorage)
+	local ScanResult = ScanLocation({ ReplicatedStorage, workspace, game.StarterGui, game.Lighting })
 	if ScanResult ~= nil then
 		ScanMessage.Text = 'Vulnerable remote found! <font transparency="0.5">('..ScanResult:GetFullName()..')</font>'
 		RemoteValue.Value = ScanResult
@@ -405,8 +405,6 @@ local script = G2L["b"];
 		script.Parent.CommandBar.Visible = true
 		ScanMessage.Visible = false
 		TweenIn()
-		task.wait(1.5)
-		script.Parent.Toggle.Enabled = true
 	else
 		ScanMessage.Text = 'No backdoor found!'
 		task.wait(5)
@@ -415,6 +413,54 @@ local script = G2L["b"];
 	
 end;
 task.spawn(C_b);
+-- StarterGui.Strawberry.Main.Toggle
+local function C_d()
+local script = G2L["d"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local PlayingOut = false
+	local function TweenOut()
+		if PlayingOut then
+			return
+		end
+		PlayingOut = true
+		local Info = TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+		local Tween = TweenService:Create(script.Parent, Info, {Position = UDim2.new(0, 0, -1, 0)})
+		Tween:Play()
+		task.wait(1)
+		PlayingOut = false
+	end
+	
+	local PlayingIn = false
+	local function TweenIn()
+		if PlayingIn then
+			return
+		end
+		PlayingIn = true
+		local Info = TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
+		local Tween = TweenService:Create(script.Parent, Info, {Position = UDim2.new(0, 0, 0, 0)})
+		Tween:Play()
+		task.wait(1)
+		PlayingIn = false
+	end
+	
+	if script.Parent.Remote.Value ~= nil then
+		if script.Parent.Remote.Value:IsA("RemoteEvent") then
+			UserInputService.InputBegan:Connect(function(input)
+				if input.KeyCode == Enum.KeyCode.LeftAlt or input.KeyCode == Enum.KeyCode.RightAlt then
+					if script.Parent.Position == UDim2.new(0, 0, 0, 0) then
+						TweenOut()
+					elseif script.Parent.Position == UDim2.new(0, 0, -1, 0) then
+						TweenIn()
+					end
+				end
+			end)
+		end
+	end
+	
+end;
+task.spawn(C_d);
 -- StarterGui.Strawberry.Main.CommandManager
 local function C_e()
 local script = G2L["e"];
