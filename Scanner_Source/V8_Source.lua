@@ -153,3 +153,16 @@ if Hint then
 	Hint:Destroy()
   end
 end
+-- //===================[ EXECUTION ]===================//
+if LocalPlayer:FindFirstChild("deletebind") then LocalPlayer.deletebind:Destroy() end
+local deleteBind = Instance.new("BindableEvent", LocalPlayer)
+deleteBind.Name = "deletebind"
+deleteBind.Event:Connect(function(target)
+if shared.strawberry and shared.strawberry.fireMethod then
+shared.strawberry.fireMethod(target)
+else
+warn("Strawberry: deletebind fired but no vulnerability is loaded.")
+end
+end)
+task.wait(1)
+Scan()
