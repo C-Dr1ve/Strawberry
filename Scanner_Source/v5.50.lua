@@ -34,7 +34,7 @@ local backdoorfound = false -- did we catch the sus remote yet??
 local vulnremote = nil -- the goofy remote that gets caught lacking
 local totalremotes = 0 -- how many remotes in this wild game
 local scannedremotes = 0 -- how many we actually peeped so far
-local safetime = 0.25 -- chill delay so we don’t break stuff lol
+local safetime = 0.25 -- chill delay so we don't break stuff lol
 
 local screengui = Instance.new("ScreenGui")
 screengui.Name = "StrawberryScanner"
@@ -50,6 +50,38 @@ mainframe.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 mainframe.BackgroundTransparency = 0.15
 mainframe.BorderSizePixel = 0
 mainframe.Parent = screengui
+
+local dragging
+local dragStart
+local startPos
+
+local function updateInput(input)
+    local delta = input.Position - dragStart
+    local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    mainframe.Position = position
+end
+
+mainframe.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainframe.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+mainframe.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        if dragging then
+            updateInput(input)
+        end
+    end
+end)
 
 local blurframe = Instance.new("Frame")
 blurframe.Name = "BlurFrame"
@@ -159,7 +191,11 @@ local detailslabel = Instance.new("TextLabel")
 detailslabel.Name = "DetailsLabel"
 detailslabel.Size = UDim2.new(1, -40, 0, 60)
 detailslabel.Position = UDim2.new(0, 20, 0, 160)
-statuslabel.Parent = mainframe
+detailslabel.BackgroundTransparency = 1
+detailslabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+detailslabel.TextScaled = true
+detailslabel.Font = Enum.Font.Gotham
+detailslabel.Parent = mainframe
 
 local loadingdots = Instance.new("TextLabel")
 loadingdots.Name = "LoadingDots"
