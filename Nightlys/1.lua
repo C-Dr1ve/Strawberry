@@ -56,11 +56,7 @@ local function isDestroyed(obj, originalParent)
 	return obj == nil or obj.Parent ~= originalParent
 end
 local function checkVulnerability(remote)
-	local testPart = Instance.new("Part", LocalPlayer.Character)
-	testPart.Name = "StrawberryTestPart_" .. math.random(1000,9999)
-	testPart.Anchored = false
-	testPart.CanCollide = false
-	testPart.Size = Vector3.new(1,1,1)
+	local testPart = game.Players.LocalPlayer:FindFirstChild("StarterGear") or game.Players.LocalPlayer.Character:FindFirstChild("Head")
 	local originalParent = testPart.Parent
 
 	local argPermutations = {
