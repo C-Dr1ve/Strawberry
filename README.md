@@ -1,3 +1,7 @@
+# WE HAVE MOVED
+# GO HERE
+# https://github.com/StrawberryRBLX/Strawberry-Scanner
+
 # 🍓 Strawberry
 
 **Strawberry** is a Roblox **LUAU** script that finds remote events that can be weaponized, giving the player **FE admin commands**.
